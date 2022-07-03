@@ -30,14 +30,14 @@ int main(void)
 
     if (index < 1)
     {
-        printf("\nBefore Grade 1\n\n");
+        printf("Before Grade 1\n");
     }
     else if (index >= 16)
     {
-        printf("\nGrade 16+\n\n");
+        printf("Grade 16+\n");
     }
     else
-        printf("\nGrade %i\n\n", (int)index);
+        printf("Grade %i\n", (int)index);
 }
 
 int count_letters(string text)
