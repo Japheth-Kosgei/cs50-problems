@@ -23,13 +23,17 @@ int main(void)
 
     // Count the number of sentences
     int number_sentences = count_sentences(text);
-    printf("%i sentences\n", number_sentences);
+    printf("%i sentences\n\n", number_sentences);
 
     // Calculate the Coleman-Liau index
     float L = (number_letters / number_words) * 100;
+    printf("L = %f\n", L);
     float S = (number_sentences / number_words) * 100;
+    printf("S = %f\n", S);
     float premature_index = 0.0588 * L - 0.296 * S -15.8;
+    printf("Premature_index = %f\n", premature_index);
     double index = round(premature_index);
+    printf("Index = %f\n", index);
 
     if (index < 1)
     {
