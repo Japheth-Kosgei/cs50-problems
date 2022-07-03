@@ -38,5 +38,7 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-    for ()
+    // Determine the value of each letter
+
+    // 
 }
