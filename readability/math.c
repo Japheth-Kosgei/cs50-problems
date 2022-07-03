@@ -10,8 +10,8 @@ int main (void)
     // Division
     int x = get_int("x: ");
     int y = get_int("y: ");
-    int answer = x / y;
-    printf("Answer: %i\n", answer);
+    float answer = (float) x / y;
+    printf("Answer: %f\n", answer);
 
     // Multiplication
     // Addition
