@@ -28,7 +28,16 @@ int main(void)
     float premature_index = 0.0588 * (L - 0.0296) * (S - 15.8);
     double index = round(premature_index);
 
-    printf("Grade %i\n", (int)index);
+    if (index < 1)
+    {
+        printf("Before Grade 1");
+    }
+    else if (index <= 16)
+    {
+        printf("Grade 16+");
+    }
+    else
+        printf("Grade %i\n", (int)index);
 }
 
 int count_letters(string text)
