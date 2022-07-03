@@ -46,7 +46,8 @@ int compute_score(string word)
     {
         if (islower(i))
         {
-            int ascii_value = 
+            char character = 
+            int ascii_value =
         }
     }
 }
