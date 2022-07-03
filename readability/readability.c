@@ -43,6 +43,16 @@ int count_letters(string text)
 int count_words(string text)
 {
     // Count the number of words in the text (a sequence of letters seperated by a space)
-    int number_words = 0;
-    int length_of_string = strlen(text)
+    int number_words = 1; //This is to account for the last word without space.
+    int length_of_string = strlen(text);
+
+    for (int i = 0; i < length_of_string; i++)
+    {
+        if (text[i] == ' ')
+        {
+            number_words ++;
+        }
+    }
+
+    return number_words;
 }
