@@ -5,6 +5,7 @@
 
 int count_letters(string text);
 int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -20,6 +21,8 @@ int main(void)
     printf("%i words\n", number_words);
 
     // Count the number of sentences
+    int number_sentences = count_sentences(text);
+    printf("%i sentences\n", number_sentences);
 
 }
 
@@ -55,4 +58,19 @@ int count_words(string text)
     }
 
     return number_words;
+}
+
+int count_sentences(string text)
+{
+    // Count the number of sentences seperated by . or ! or ?
+    int number_sentences = 0;
+    int length_of_string = strlen(text);
+
+    for (int i = 0; i < length_of_string; i ++)
+    {
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
+        number_sentences ++;
+    }
+
+    return number_sentences;
 }
