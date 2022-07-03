@@ -26,8 +26,8 @@ int main(void)
     printf("%i sentences\n", number_sentences);
 
     // Calculate the Coleman-Liau index
-    float L = ((float)number_letters / number_words * 100);
-    float S = ((float)number_sentences / number_words * 100);
+    float L = (((float)number_letters / number_words) * 100);
+    float S = (((float)number_sentences / number_words) * 100);
     float premature_index = (0.0588 * L) - (0.0296 * S) - 15.8;
     double index = round(premature_index);
 
