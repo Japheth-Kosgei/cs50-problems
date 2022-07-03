@@ -4,5 +4,6 @@
 int main(int argc, string argv[])
 {
     // This function reads a command line argument and prints it out.
-    printf("%s\n", argv[1]);
+    string name = argv[1];
+    printf("%c\n", name[0]);
 }
