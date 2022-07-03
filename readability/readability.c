@@ -24,6 +24,10 @@ int main(void)
     int number_sentences = count_sentences(text);
     printf("%i sentences\n", number_sentences);
 
+    // Calculate the Coleman-Liau index
+    L
+    int index = 0.0588 * (L - 0.0296) * (S - 15.8);
+
 }
 
 int count_letters(string text)
