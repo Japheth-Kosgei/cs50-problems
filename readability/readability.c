@@ -9,6 +9,7 @@ int main(void)
 {
     // Prompt the user for text
     string text = get_string("Text: ");
+    printf("%s\n\n", text);
 
     // Count the number of letters
     int number_letters = count_letters(text);
