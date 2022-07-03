@@ -28,10 +28,10 @@ int main(void)
     // Calculate the Coleman-Liau index
     float L = ((float)number_letters / 100) / 100;
     float S = ((float)number_sentences / 100) / 100;
-    double premature_index = 0.0588 * (L - 0.0296) * (S - 15.8);
+    float premature_index = 0.0588 * (L - 0.0296) * (S - 15.8);
     double index = round(premature_index);
 
-    printf()
+    printf(")
 }
 
 int count_letters(string text)
