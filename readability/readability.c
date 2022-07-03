@@ -26,6 +26,11 @@ int count_letters(string text)
 
     for (int i = 0; i < number_letters; i++)
     {
-        
+        if islower(text[i]) || isupper(text[i])
+        {
+            number_letters ++;
+        }
     }
+
+    return number_letters;
 }
