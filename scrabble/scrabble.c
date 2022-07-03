@@ -38,11 +38,11 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-    // Determine the value of each letter
+    // Determine the value of each letter and update scoreak
     int score = 0;
     int string_len = strlen(word);
 
-    for (int i=0; i<string_len; i++)
+    for (int i = 0; i < string_len; i++)
     {
 
         if (islower(word[i]))
