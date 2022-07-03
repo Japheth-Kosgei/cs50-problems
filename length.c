@@ -8,6 +8,10 @@ int main()
     string name = get_string("Enter your name: ");
 
     // Find the number of characters in the string
-    int lenght = 0;
-    for (int i=0; )
+    int length = 0;
+    while (name[length] != 0)
+    {
+        length ++;
+    }
+    printf("%i\n", length);
 }
