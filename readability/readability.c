@@ -4,6 +4,7 @@
 #include <ctype.h>
 
 int count_letters(string text);
+int count_words(strinf text);
 
 int main(void)
 {
@@ -12,9 +13,11 @@ int main(void)
 
     // Count the number of letters
     int number_letters = count_letters(text);
-    printf("%i\n", number_letters);
+    printf("%i letters\n", number_letters);
 
     // Count the number of words
+    int number_words = count_words(text);
+    printf("%i words\n", number_words);
 
     // Count the number of sentences
 
@@ -35,4 +38,10 @@ int count_letters(string text)
     }
 
     return number_letters;
+}
+
+int count_words(string text)
+{
+    // Count the number of words in the text (a sequence of letters seperated by a space)
+    
 }
