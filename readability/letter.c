@@ -3,10 +3,10 @@
 #include <string.h>
 #include <ctype.h>
 
-int main(int argc, string argv[])
+int main(void)
 {
-    // Take in a commandline argument and print out is len
-    string text = argv[];
+    // Take in a string and print out is len
+    string text = get_string("Text: ");
     int len = strlen(text);
 
     printf("%i\n", len);
