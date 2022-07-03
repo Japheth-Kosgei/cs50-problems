@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <cs50.h>
 
-int main(argc, argv)
+int main(int argc, string argv[])
 {
-    string name = get_string("Enter a character: ");
-    int ascii_value = name[0];
-    printf("The ASCII value is %i\n", ascii_value);
+    //This function takes in a character and prints out its ASCII value.
+    string name = argv[1];
+    char character = name [0];
+    printf("%d\n", character);
 }
