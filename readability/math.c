@@ -4,5 +4,15 @@
 #include <ctype.h>
 #include <math.h>
 
-int main
-// Do some basic arithmetic
+int main (void)
+{
+    // Do some basic arithmetic
+    // Division
+    int x = get_int("x: ");
+    int y = get_int("y: ");
+    int answer = x / y;
+    printf("Answer: %i", answer);
+    
+    // Multiplication
+    // Addition
+}
