@@ -15,15 +15,12 @@ int main(void)
 
     // Count the number of letters
     int number_letters = count_letters(text);
-    printf("%i letters\n", number_letters);
 
     // Count the number of words
     int number_words = count_words(text);
-    printf("%i words\n", number_words);
 
     // Count the number of sentences
     int number_sentences = count_sentences(text);
-    printf("%i sentences\n", number_sentences);
 
     // Calculate the Coleman-Liau index
     float L = ((float)number_letters / 100) / 100;
