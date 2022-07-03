@@ -15,36 +15,29 @@ int main(void)
 
     // Count the number of letters
     int number_letters = count_letters(text);
-    printf("%i letters\n", number_letters);
 
     // Count the number of words
     int number_words = count_words(text);
-    printf("%i words\n", number_words);
 
     // Count the number of sentences
     int number_sentences = count_sentences(text);
-    printf("%i sentences\n\n", number_sentences);
 
     // Calculate the Coleman-Liau index
     float L = ((float)number_letters / number_words) * 100;
-    printf("L = %f\n", L);
     float S = ((float)number_sentences / number_words) * 100;
-    printf("S = %f\n", S);
     float premature_index = 0.0588 * L - 0.296 * S -15.8;
-    printf("Premature_index = %f\n", premature_index);
     double index = round(premature_index);
-    printf("Index = %f\n", index);
 
     if (index < 1)
     {
-        printf("Before Grade 1\n");
+        printf("\nBefore Grade 1\n\n");
     }
     else if (index >= 16)
     {
-        printf("Grade 16+\n");
+        printf("\nGrade 16+\n\n");
     }
     else
-        printf("Grade %i\n", (int)index);
+        printf("\nGrade %i\n\n", (int)index);
 }
 
 int count_letters(string text)
