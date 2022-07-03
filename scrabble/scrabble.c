@@ -46,7 +46,7 @@ int compute_score(string word)
     {
         if (islower(i))
         {
-            int arr_index = 
+            int arr_index;
         }
     }
 
