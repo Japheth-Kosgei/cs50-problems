@@ -39,6 +39,7 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
     // Determine the value of each letter
+    for (int i=0; i<)
 
-    // 
+    // Sum up the values
 }
