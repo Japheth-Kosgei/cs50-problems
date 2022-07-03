@@ -44,10 +44,15 @@ int compute_score(string word)
 
     for (int i=0; i<string_len; i++)
     {
-        if (islower(i))
+
+        if (islower(word[i]))
         {
-            char character = 
-            int ascii_value =
+            char character = word[i];
+            int ascii_value = character;
+            int point = (ascii_value - 97);
+            int score += POINTS[point];
         }
+
+        if (is)
     }
 }
