@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
-#include <string,h>
+#include <string.h>
 
 int main()
 {
@@ -9,6 +9,6 @@ int main()
     string name_string = get_string("Enter your name: ");
 
     // Find the number of characters in the string
-    int len = get_string_length(name_string);
+    int len = strlen(name_string);
     printf("%i\n", len);
 }
