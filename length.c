@@ -10,10 +10,17 @@ int main()
     string name_string = get_string("Enter your name: ");
 
     // Find the number of characters in the string
-    int len = get_string(name_string);
+    int len = get_string_length(name_string);
+    printf("%i\n", len);
 }
 
 int get_string_length(string name)
 {
-    int
+    int i = 0;
+    while (name[i] != '\0')
+    {
+        i++;
+    }
+
+    return i;
 }
