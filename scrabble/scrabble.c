@@ -44,7 +44,10 @@ int compute_score(string word)
 
     for (int i=0; i<string_len; i++)
     {
-        if i = is
+        if (islower(i))
+        {
+            int arr_index = 
+        }
     }
 
     // Sum up the values
