@@ -4,8 +4,8 @@
 int main(void)
 {
     // Prompt the user for text
-    string text = get_string("Text: \n ");
-    printdf("%s\n", text);
+    string text = get_string("Text: ");
+    printf("%s\n", text);
 
     // Count the number of letters
 
