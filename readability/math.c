@@ -11,8 +11,8 @@ int main (void)
     int x = get_int("x: ");
     int y = get_int("y: ");
     int answer = x / y;
-    printf("Answer: %i", answer);
-    
+    printf("Answer: %i\n", answer);
+
     // Multiplication
     // Addition
 }
