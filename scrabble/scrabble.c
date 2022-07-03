@@ -50,9 +50,20 @@ int compute_score(string word)
             char character = word[i];
             int ascii_value = character;
             int point = (ascii_value - 97);
-            int score += POINTS[point];
+            score += POINTS[point];
         }
 
-        if (is)
+        else if (isupper(word[i]))
+        {
+            char character = word[i];
+            int ascii_value = character;
+            int point = (ascii_value - 65);
+            score += POINTS[point];
+        }
+
+        else
+        {
+            score += 0;
+        }
     }
 }
