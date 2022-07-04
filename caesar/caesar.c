@@ -63,5 +63,10 @@ bool is_digits_only(string plain_text)
 
 char rotate (char plain_text_char, int key)
 {
-    
+    // Rotate the plain_text_char by the key
+    if (isalpha(plain_text_char))
+    {
+        char cipher_text_char = (plain_text_char + key) % 26;
+    }
+    return cipher_text_char;
 }
