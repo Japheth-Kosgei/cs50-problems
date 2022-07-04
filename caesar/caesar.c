@@ -1,4 +1,5 @@
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 
 float is_digits_only(string plain_text);
@@ -37,7 +38,7 @@ bool is_digits_only(string plain_text)
     int length_of_plain_text = strlen(plain_text);
     for (int i = 0; i < length_of_plain_text; i ++)
     {
-        if (isalnum(plain_text))
+        if (isdigit(plain_text))
         {
             return true;
         }
