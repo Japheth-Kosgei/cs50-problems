@@ -7,9 +7,9 @@
 int main(void)
 {
     // Find out what modulo does
-    int a = get_int("a: ");
-    int b = get_int("b: ");
+    int plain_text_char = get_int("plain_text_char: ");
+    int key = get_int("key:  ");
+    int answer = (plain_text_char + key) % 26;
 
-    int modulo = a % b;
-    printf("Modulo = %i\n", modulo);
+    printf("Answer is %i\n", answer);
 }
