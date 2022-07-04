@@ -44,17 +44,20 @@ int main(int argc, string argv[])
 
 bool is_digits_only(string plain_text)
 {
+    bool result = false;
     int length_of_plain_text = strlen(plain_text);
     for (int i = 0; i < length_of_plain_text; i ++)
     {
         if (isdigit(plain_text[i]))
         {
-            return true;
+            result = true;
         }
 
         else
         {
-            return false;
+            result = false;
         }
     }
+
+    return result;
 }
