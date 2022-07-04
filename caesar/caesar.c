@@ -76,11 +76,20 @@ char rotate (char plain_text_char, int key)
 {
     // Rotate the plain_text_char by the key
     char cipher_text_char = plain_text_char;
+
     if (isupper(plain_text_char))
     {
         cipher_text_char -= 65;
         cipher_text_char = (plain_text_char + key) % 26;
         cipher_text_char += 65;
     }
+
+    if (ilower(plain_text_char))
+    {
+        cipher_text_char -= 97;
+        cipher_text_char = (plain_text_char + key) % 26;
+        cipher_text_char += 97;
+    }
+    
     return cipher_text_char;
 }
