@@ -37,17 +37,6 @@ int main(int argc, string argv[])
     }
 
     printf("\n");
-
-
-
-    // Do the encryption
-        // For each character in the plaintext
-            // If it is a lower case character;
-                // Rotate using k
-            // If it is upper case
-                // Rotate using but differently
-
-    // Print the ciphertext
 }
 
 
