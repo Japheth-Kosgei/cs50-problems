@@ -86,7 +86,7 @@ char rotate (char plain_text_char, int key)
 
     if (islower(plain_text_char))
     {
-        cipher_text_char -= 97;
+        plain_text_char -= 97;
         cipher_text_char = (plain_text_char + key) % 26;
         cipher_text_char += 97;
     }
