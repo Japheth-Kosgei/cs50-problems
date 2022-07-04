@@ -16,12 +16,7 @@ int main(int argc, string argv[])
     }
 
     // Check if the plain_text is only decimal digit; and print an error meassage
-    if (is_digits_only(argv[1]))
-    {
-        return 0;
-    }
-
-    else
+    if (!is_digits_only(argv[1]))
     {
         printf("Usage: ./caesar key\n");
         return 1;
