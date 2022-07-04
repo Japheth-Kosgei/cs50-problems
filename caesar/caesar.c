@@ -26,6 +26,7 @@ int main(int argc, string argv[])
 
     // Convert argv[1] to int
     int key = atoi(argv[1]);
+    string plain_text = get_string("plaintext: ");
 
     printf("ciphertext: ");
     for (int i = 0; )
