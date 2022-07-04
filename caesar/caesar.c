@@ -9,7 +9,6 @@ char rotate (char plain_text_char, int key);
 
 int main(int argc, string argv[])
 {
-    // Accept input
     // Check if it has more than or less than 2 args
     if (argc < 2 || argc > 2)
     {
@@ -29,6 +28,7 @@ int main(int argc, string argv[])
     string plain_text = get_string("plaintext: ");
     int len_plain_text = strlen(plain_text);
 
+    // Do the cipher
     printf("ciphertext: ");
     for (int i = 0; i < len_plain_text; i ++)
     {
