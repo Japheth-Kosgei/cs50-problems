@@ -36,7 +36,10 @@ int main(int argc, string argv[])
     // Check if the key contain only one of each alphabets
     for (int i = 0; i < key_length; i ++)
     {
-        for (int j = 0; j < key_length;)
+        for (int j = 0; j < key_length; j ++)
+        {
+            if 
+        }
     }
 
     // Change the key to all-uppercase
