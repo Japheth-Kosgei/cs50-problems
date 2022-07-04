@@ -30,9 +30,9 @@ int main(int argc, string argv[])
     int len_plain_text = strlen(plain_text);
 
     printf("ciphertext: ");
-    for (int i = 0; i < len_plain_text)
+    for (int i = 0; i < len_plain_text; i ++)
     {
-        char cipher_text_char = rotate(plain_text[i, key]);
+        char cipher_text_char = rotate(plain_text[i], key);
         printf("%c", cipher_text_char);
     }
 
