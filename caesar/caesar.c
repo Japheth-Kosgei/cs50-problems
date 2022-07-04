@@ -36,6 +36,8 @@ int main(int argc, string argv[])
         printf("%c", cipher_text_char);
     }
 
+    printf("\n");
+
 
 
     // Do the encryption
