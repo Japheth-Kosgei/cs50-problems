@@ -27,6 +27,9 @@ int main(int argc, string argv[])
     // Convert argv[1] to int
     int key = atoi(argv[1]);
 
+    printf("ciphertext: ");
+    for (int i = 0; )
+
 
 
     // Do the encryption
