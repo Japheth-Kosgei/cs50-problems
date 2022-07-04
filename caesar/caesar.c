@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 bool is_digits_only(string plain_text);
-char rotate (char plain_text_char, int key);
+char rotate(char plain_text_char, int key);
 
 int main(int argc, string argv[])
 {
@@ -42,8 +42,11 @@ int main(int argc, string argv[])
 
 bool is_digits_only(string plain_text)
 {
+    // Check if it has had decimal digits only
     bool result = false;
     int length_of_plain_text = strlen(plain_text);
+
+    // Loop through the string
     for (int i = 0; i < length_of_plain_text; i ++)
     {
         if (isdigit(plain_text[i]))
@@ -61,7 +64,7 @@ bool is_digits_only(string plain_text)
 }
 
 
-char rotate (char plain_text_char, int key)
+char rotate(char plain_text_char, int key)
 {
     // Rotate the plain_text_char by the key
     char cipher_text_char = plain_text_char;
