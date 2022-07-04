@@ -76,7 +76,7 @@ char rotate (char plain_text_char, int key)
     char cipher_text_char = plain_text_char;
     if (isalpha(plain_text_char))
     {
-        cipher_text_char = (plain_text_char + key) % 26;
+        cipher_text_char = plain_text_char + key;
     }
     return cipher_text_char;
 }
