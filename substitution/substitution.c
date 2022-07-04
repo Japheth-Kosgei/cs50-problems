@@ -9,5 +9,5 @@ int main(int argc, string argv[])
     // Print ciphertext
     // Encrypt
     // Change the key to all-uppercase
-    //
+    // Exit.
 }
