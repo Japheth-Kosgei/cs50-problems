@@ -13,7 +13,9 @@ int main(int argc, string argv[])
 
     // Check if key is valid: 26 letters, each letter should appear only once.
     string key = argv[1];
-    if 
+    int key_length = strlen(key);
+
+    if key_length
     // Change the key to all-uppercase
     // Print plaintext
     // Print ciphertext
