@@ -27,10 +27,13 @@ int main(int argc, string argv[])
     // Convert argv[1] to int
     int key = atoi(argv[1]);
     string plain_text = get_string("plaintext: ");
-    len_plain_text = strlen(plain_text)
+    int len_plain_text = strlen(plain_text);
 
     printf("ciphertext: ");
-    for (int i = 0; i < )
+    for (int i = 0; i < len_plain_text)
+    {
+        rotate()
+    }
 
 
 
