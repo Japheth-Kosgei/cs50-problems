@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-float is_digits_only(string);
+float is_digits_only(string plain_text);
 
 int main(int argc, string argv[])
 {
@@ -32,7 +32,19 @@ int main(int argc, string argv[])
     // Print the ciphertext
 }
 
-float is_digits_only(string)
+bool is_digits_only(string plain_text)
 {
-    if 
+    int length_of_plain_text = strlen(plain_text);
+    for (int i = 0; i < length_of_plain_text; i ++)
+    {
+        if (isalnum(plain_text))
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
+    }
 }
