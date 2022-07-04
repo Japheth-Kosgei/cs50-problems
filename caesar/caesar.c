@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+float is_digits_only(string);
+
 int main(int argc, string argv[])
 {
     // Accept input
@@ -28,4 +30,9 @@ int main(int argc, string argv[])
                 // Rotate using but differently
 
     // Print the ciphertext
+}
+
+float is_digits_only(string)
+{
+    if 
 }
