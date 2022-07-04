@@ -8,7 +8,17 @@ int main(int argc, string argv[])
             // If it doesn't have a commandline argument
             // It has more then one command line argument
             // It is not a decimal digit; and print an error meassage
-    
+
+    if (argc < 2 || argc > 2)
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
+
+    else
+    {
+        return 0;
+    }
 
     // Do the encryption
         // For each character in the plaintext
