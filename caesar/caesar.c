@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 bool is_digits_only(string plain_text);
+string rotate (char plain_text_char, int key);
 
 int main(int argc, string argv[])
 {
@@ -22,6 +23,11 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+
+    // Convert argv[1] to int
+    int key = atoi(argv[1]);
+
+
 
     // Do the encryption
         // For each character in the plaintext
