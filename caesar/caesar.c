@@ -15,11 +15,6 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    else
-    {
-        return 0;
-    }
-
     // Check if the plain_text is only decimal digit; and print an error meassage
     if (is_digits_only(argv[1]))
     {
