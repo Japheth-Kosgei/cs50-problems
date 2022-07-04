@@ -78,7 +78,8 @@ char rotate (char plain_text_char, int key)
     char cipher_text_char = plain_text_char;
     if (isupper(plain_text_char))
     {
-        
+        cipher_text_char -= 65;
+        cipher_text_char = (plain_text_char )
     }
     return cipher_text_char;
 }
