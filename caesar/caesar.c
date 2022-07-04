@@ -33,7 +33,7 @@ int main(int argc, string argv[])
     for (int i = 0; i < len_plain_text; i ++)
     {
         char cipher_text_char = rotate(plain_text[i], key);
-        printf("%c", cipher_text_char);
+        printf("%c\n", cipher_text_char);
     }
 
 
