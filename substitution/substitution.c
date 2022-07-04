@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, string argv[])
 {
@@ -12,7 +13,7 @@ int main(int argc, string argv[])
 
     // Check if key is valid: 26 letters, each letter should appear only once.
     string key = argv[1];
-    
+    if 
     // Change the key to all-uppercase
     // Print plaintext
     // Print ciphertext
