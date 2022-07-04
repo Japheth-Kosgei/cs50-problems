@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 bool is_digits_only(string plain_text);
-string rotate (char plain_text_char, int key);
+char rotate (char plain_text_char, int key);
 
 int main(int argc, string argv[])
 {
@@ -39,6 +39,7 @@ int main(int argc, string argv[])
     // Print the ciphertext
 }
 
+
 bool is_digits_only(string plain_text)
 {
     bool result = false;
@@ -57,4 +58,10 @@ bool is_digits_only(string plain_text)
     }
 
     return result;
+}
+
+
+char rotate (char plain_text_char, int key)
+{
+    
 }
