@@ -1,17 +1,14 @@
 #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
+#include <string.h>
 
-float is_digits_only(string plain_text);
+bool is_digits_only(string plain_text);
 
 int main(int argc, string argv[])
 {
     // Accept input
-        // Return 1 if:
-            // If it doesn't have a commandline argument
-            // It has more then one command line argument
-            // It is not a decimal digit; and print an error meassage
-
+    // Check if it has more than or less than 2 args
     if (argc < 2 || argc > 2)
     {
         printf("Usage: ./caesar key\n");
@@ -21,6 +18,18 @@ int main(int argc, string argv[])
     else
     {
         return 0;
+    }
+
+    // Check if the plain_text is only decimal digit; and print an error meassage
+    if (is_digits_only(argv[1]))
+    {
+        return 0;
+    }
+
+    else
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
     }
 
     // Do the encryption
