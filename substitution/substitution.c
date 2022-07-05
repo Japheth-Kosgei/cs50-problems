@@ -38,13 +38,27 @@ int main(int argc, string argv[])
     {
         for (int j = 0; j < key_length; j ++)
         {
-            if 
+            if (j == i)
+            {
+                printf("Key must not contain repeated characters.\n");
+                return 1;
+            }
         }
     }
 
-    // Change the key to all-uppercase
-    // Print plaintext
-    // Print ciphertext
+    // Prompt plaintext
+    string plain_text = get_string("Plaintext: ");
+    int plain_text_length = strlen(plain_text);
+    printf("ciphertext: ");
+
+    for (int i = 0; i < plain_text_length; i ++)
+    {
+        char cipher_text_character = plain_text[i];
+        // Print ciphertext
+        printf("%c", cipher_text_character);
+    }
+
+    printf("\n");
     // Encrypt
     // Exit.
 }
