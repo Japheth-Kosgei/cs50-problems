@@ -66,14 +66,15 @@ int main(int argc, string argv[])
         // Upper case letters
         if (isupper(plain_text[i]))
         {
-            
-            char cipher_text_character = toupper(key[i]);
+            int plain_text_char_index = plain_text[i] - 65;
+            char cipher_text_character = toupper(key[plain_text_char_index]);
             printf("%c", cipher_text_character);
         }
 
         // Lower case letters
         else if (islower(plain_text[i]))
         {
+            int plain_text_char_index = plain_text[i] - 97;
             char cipher_text_character = tolower(key[i]);
             printf("%c", cipher_text_character);
         }
