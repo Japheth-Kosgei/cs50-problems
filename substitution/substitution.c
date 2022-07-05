@@ -75,6 +75,7 @@ int main(int argc, string argv[])
         // Lower case letters
         else if (islower(plain_text[i]))
         {
+            printf("%c %d", plain_text[i], plain_text[i]);
             int plain_text_char_index = plain_text[i] - 97;
             char cipher_text_character = tolower(key[i]);
             printf("%c", cipher_text_character);
