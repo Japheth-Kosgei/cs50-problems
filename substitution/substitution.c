@@ -49,9 +49,11 @@ int main(int argc, string argv[])
     if (element_count > 1)
     {
         printf("Key must not contain repeated characters.\n");
+        element_count = 0;
         return 1;
     }
 
+    element_count = 0;
     }
 
     // Prompt plaintext
