@@ -44,13 +44,14 @@ int main(int argc, string argv[])
             {
                 element_count ++;
             }
-
-            if (element_count > 1)
-            {
-                printf("Key must not contain repeated characters.\n");
-                return 1;
-            }
         }
+
+        if (element_count > 1)
+        {
+            printf("Key must not contain repeated characters.\n");
+            return 1;
+        }
+    
     }
 
     // Prompt plaintext
