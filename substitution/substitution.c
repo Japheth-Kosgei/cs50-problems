@@ -60,11 +60,13 @@ int main(int argc, string argv[])
     int plain_text_length = strlen(plain_text);
     printf("ciphertext: ");
 
+    // Do encryption
     for (int i = 0; i < plain_text_length; i ++)
     {
         // Upper case letters
         if (isupper(plain_text[i]))
         {
+            
             char cipher_text_character = toupper(key[i]);
             printf("%c", cipher_text_character);
         }
