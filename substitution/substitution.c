@@ -34,11 +34,18 @@ int main(int argc, string argv[])
     }
 
     // Check if the key contain only one of each alphabets
+    int element_count = 0;
+
     for (int i = 0; i < key_length; i ++)
     {
         for (int j = 0; j < key_length; j ++)
         {
             if (j == i)
+            {
+                element_count ++;
+            }
+
+            if (element_count > 1)
             {
                 printf("Key must not contain repeated characters.\n");
                 return 1;
