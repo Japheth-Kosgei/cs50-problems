@@ -57,7 +57,7 @@ int main(int argc, string argv[])
     }
 
     // Prompt plaintext
-    string plain_text = get_string("Plaintext: ");
+    string plain_text = get_string("Plaintext:  ");
     int plain_text_length = strlen(plain_text);
     printf("ciphertext: ");
 
