@@ -63,7 +63,24 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < plain_text_length; i ++)
     {
-        char cipher_text_character = plain_text[i];
+        // Upper case letters
+        if (isupper(plain_text[i]))
+        {
+
+        }
+
+        // Lower case letters
+        if (islower(plain_text[i]))
+        {
+
+        }
+
+        // Anything else
+        else
+        {
+            char cipher_text_character = plain_text[i];
+        }
+        
         // Print ciphertext
         printf("%c", cipher_text_character);
     }
