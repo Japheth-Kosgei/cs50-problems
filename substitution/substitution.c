@@ -40,7 +40,7 @@ int main(int argc, string argv[])
     {
         for (int j = 0; j < key_length; j ++)
         {
-            if (j == i)
+            if (key[j] == key[i])
             {
                 element_count ++;
             }
