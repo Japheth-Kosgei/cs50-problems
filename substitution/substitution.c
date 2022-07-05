@@ -67,22 +67,22 @@ int main(int argc, string argv[])
         if (isupper(plain_text[i]))
         {
             char cipher_text_character = tolower(key[i]);
+            printf("%c", cipher_text_character);
         }
 
         // Lower case letters
         if (islower(plain_text[i]))
         {
             char cipher_text_character = toupper(key[i]);
+            printf("%c", cipher_text_character);
         }
 
         // Anything else
         else
         {
             char cipher_text_character = plain_text[i];
+            printf("%c", cipher_text_character);
         }
-
-        // Print ciphertext
-        printf("%c", cipher_text_character);
     }
 
     printf("\n");
