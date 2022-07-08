@@ -92,5 +92,7 @@ void print_winner(void)
         }
     }
     printf("%s\n", candidates[highest_vote_count_index].name);
+
+    for (int i = 0; )
     return;
 }
