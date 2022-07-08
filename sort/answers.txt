@@ -1,11 +1,13 @@
 sort1 uses: TODO
-
+Bubble sort
 How do you know?: TODO
-
+It uses less time on worst case scenario
 sort2 uses: TODO
 Merge sort
 How do you know?: TODO
-Because it uses less time on both worst and best case scenario
+Because it uses the least amount of time on both worst and best case scenario
 sort3 uses: TODO
-
+Selection sort
 How do you know?: TODO
+It uses almost similar time on both worsst case and best case scenario. It also uses more time than sort 2
+and less time than sort 1.
