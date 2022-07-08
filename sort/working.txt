@@ -1,5 +1,10 @@
-Algorithm   omega   Big O
+Algorithm   sorted           random         reversed
 
-sort1         
+sort1       0.069
+            1.625
+
+
 sort2
+
+
 sort3
