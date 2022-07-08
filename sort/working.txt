@@ -1,6 +1,7 @@
 Algorithm   sorted           random         reversed
 
 sort1       0.069
+            
             1.625
 
 
