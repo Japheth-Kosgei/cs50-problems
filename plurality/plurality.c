@@ -91,8 +91,12 @@ void print_winner(void)
             highest_vote_count_index = i;
         }
     }
-    printf("%s\n", candidates[highest_vote_count_index].name);
 
-    for (int i = 0; )
+    for (int i = 0; i < candidate_count; i ++)
+    {
+        if ()
+        printf("%s\n", candidates[highest_vote_count_index].name);
+    }
+
     return;
 }
