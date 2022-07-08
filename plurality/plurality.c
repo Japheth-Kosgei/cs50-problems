@@ -94,8 +94,10 @@ void print_winner(void)
 
     for (int i = 0; i < candidate_count; i ++)
     {
-        if ()
-        printf("%s\n", candidates[highest_vote_count_index].name);
+        if (highest_vote_count == candidates[i].votes)
+        {
+        printf("%s\n", candidates[i].name);
+        }
     }
 
     return;
