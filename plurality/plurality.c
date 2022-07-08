@@ -88,5 +88,6 @@ void print_winner(void)
             highest_vote_count = candidate[i].votes;
         }
     }
+    printf("%s\n", candidate[i].name);
     return;
 }
