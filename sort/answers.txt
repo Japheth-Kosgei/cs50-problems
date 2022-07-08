@@ -3,9 +3,9 @@ sort1 uses: TODO
 How do you know?: TODO
 
 sort2 uses: TODO
-
+Merge sort
 How do you know?: TODO
-
+Because it uses less time on both worst and best case scenario
 sort3 uses: TODO
 
 How do you know?: TODO
