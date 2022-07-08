@@ -20,5 +20,5 @@ sort3       0.068             0.047         0.053
 
 Algorithm           Big O           Omega 0
 Selection            n**2           n**2
-Bubble               n**2           
-Merge
+Bubble               n**2            n
+Merge                (n log n)      (n log n)
