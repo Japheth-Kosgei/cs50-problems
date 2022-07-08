@@ -2,10 +2,10 @@ Algorithm   sorted           random         reversed
 
 sort1       0.069             0.085
             0.104             0.319
-            1.625
+            1.625             8.083
 
 
-sort2
+sort2       
 
 
 sort3
