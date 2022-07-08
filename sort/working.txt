@@ -1,0 +1,5 @@
+Algorithm   omega   Big O
+
+sort1         
+sort2
+sort3
