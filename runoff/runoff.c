@@ -145,15 +145,16 @@ void tabulate(void)
     // i = voter count
     for (int i = 0; i < voter_count; i ++)
     {
+        int preferred_candidate;
         // You need to record for the first preference if not eliminated
         if (candidates[i].eliminated == false)
         {
-            int preferred_candidate = preferences[i][0];
+            preferred_candidate = preferences[i][0];
         }
 
         else
         {
-            int preferred_candidate = preferences[i][2];
+            preferred_candidate = preferences[i][2];
         }
 
         candidates[preferred_candidate].votes ++;
