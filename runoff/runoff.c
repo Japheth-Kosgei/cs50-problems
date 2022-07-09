@@ -154,6 +154,7 @@ void tabulate(void)
             if (candidates[preferred_candidate].eliminated == false)
             {
                 candidates[preferred_candidate].votes ++;
+                break;
             }
         }
 
