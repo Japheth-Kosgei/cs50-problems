@@ -147,11 +147,13 @@ void tabulate(void)
     {
         int preferred_candidate;
         // Loop through the ranks
+        // j = rank
         for (int j = 0; j < candidate_count; j ++)
         {
+            preferred_candidate = preferences[i][j];
             if (candidates[j].eliminated == false)
             {
-                preferred_candidate = preferences[i][j];
+                
             }
         }
 
