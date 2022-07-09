@@ -152,6 +152,10 @@ void tabulate(void)
                 {
                     int preferred_candidate = preferences[i][0];
                 }
+                else
+                {
+                    int preferred_candidate = preferences[i][0];
+                }
                 candidates[preferred_candidate].votes ++;
             }
         }
