@@ -143,18 +143,16 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // i = voter count
-    for (int i = 0; i < voter_count; i ++)
+    for (int i = 0; i < voter_count; i ++) // Loop through voters
     {
         int preferred_candidate;
         // You need to record for the first preference if not eliminated
-        if (candidates[i].eliminated == false)
+        for (int j = 0; j < candidate_count; j ++)
         {
-            preferred_candidate = preferences[i][0];
-        }
-
-        else
-        {
-            preferred_candidate = preferences[i][2];
+            if (candidates[j].eliminated)
+            {
+                preferred_candidate = preferences[i][j];
+            }
         }
 
         candidates[preferred_candidate].votes ++;
@@ -168,7 +166,7 @@ bool print_winner(void)
     int winning_vote = (voter_count / 2) + 1;
     for (int i = 0; i < candidate_count; i ++)
     {
-        if (candidates[i].votes > winning_vote)
+        if (candidates[i].votes >= winning_vote)
         {
             printf("%s\n", candidates[i].name);
             return true;
