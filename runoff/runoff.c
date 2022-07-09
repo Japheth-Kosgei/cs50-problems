@@ -142,30 +142,36 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    if (candidate[i].eliminated == false)
+    // i = voter count
+    for (int i = 0; i < voter_count; i ++)
+    {
+        // You need to record for the first preference if not eliminated
+        if (candidate[i].eliminated == false)
         {
-            // i = voter count
-            for (int i = 0; i < voter_count; i ++)
-            {
-                // You need to record for the first preference
-                if (candidate[i].eliminated == false)
-                {
-                    int preferred_candidate = preferences[i][0];
-                }
-                else
-                {
-                    int preferred_candidate = preferences[i][0];
-                }
-                candidates[preferred_candidate].votes ++;
-            }
+            int preferred_candidate = preferences[i][0];
         }
+
+        else
+        {
+            int preferred_candidate = preferences[i][2];
+        }
+
+        candidates[preferred_candidate].votes ++;
+    }
     return;
 }
 
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
+    for (int i = 0; i < candidate_count; i ++)
+    {
+        if (candidates[i].votes > vote_count / 2)
+        {
+            printf(candidates[i].name);
+            return true;
+        }
+    }
     return false;
 }
 
