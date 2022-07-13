@@ -2,8 +2,7 @@
 
 int main(void)
 {
-    int n = 5; // The content
-    int *pn = &n; // The pointer of int n
-    printf("%p\n", pn); // Print the pointer
-    printf("%i\n", *pn); // Print the value of the pointer.
+    char *s = "Hi!";
+    printf("%p\n", s); // Print the pointer of s
+    printf("%c\n", *s); // Print the content of s
 }
