@@ -3,10 +3,10 @@
 
 int main(void)
 {
-    int x = get_int("x: ");
-    int y = get_int("y: ");
+    char *x = get_string("x: ");
+    char *y = get_string("y: ");
 
-    if (x == y)
+    if (*x == *y)
     {
         printf("Similar\n");
         return 0;
