@@ -3,5 +3,5 @@
 int main(void)
 {
     // Print the size of an int
-    printf("%\n", sizeof(int));
+    printf("%lu\n", sizeof(int));
 }
