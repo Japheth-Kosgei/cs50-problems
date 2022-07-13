@@ -4,5 +4,5 @@ int main(void)
 {
     int n = 5;
     int *pn = &n;
-    printf()
+    printf("%i\n", *pn);
 }
