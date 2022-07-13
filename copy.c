@@ -12,7 +12,7 @@ int main(void)
     printf("%c\n\n", y);
 
     // Make it upper to know if it copied correctly
-    y = toupper(y);
+    y = toupper(x);
     printf("%c\n", x);
     printf("%c\n", y);
 }
