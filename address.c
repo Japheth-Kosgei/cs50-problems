@@ -3,6 +3,5 @@
 int main(void)
 {
     int n = 5;
-    int *pn = &n;
-    printf("%i\n", *pn);
+    printf("%p\n", &n);
 }
