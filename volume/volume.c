@@ -36,9 +36,8 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
     for (int i = 0; i < HEADER_SIZE; i ++)
     {
-        
         // Read
-
+        
         // Write
     }
 
