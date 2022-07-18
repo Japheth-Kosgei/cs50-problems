@@ -1,9 +1,9 @@
 {
   "extensions": [
     "/opt/cs50/extensions/cs50-0.0.1.vsix", 
-    "/opt/cs50/extensions/ddb50-0.0.1.vsix", 
-    "/opt/cs50/extensions/extension-uninstaller-0.0.1.vsix", 
     "/opt/cs50/extensions/phpliteadmin-0.0.1.vsix", 
+    "cs50.ddb50", 
+    "cs50.extension-uninstaller", 
     "ms-python.python", 
     "ms-vscode.cpptools", 
     "ms-vscode.hexeditor", 
@@ -11,7 +11,7 @@
     "tomoki1207.pdf", 
     "vsls-contrib.gitdoc"
   ], 
-  "image": "ghcr.io/cs50/codespace:a5e8c0bd0597c1e5cef930468efb42bf5941c238", 
+  "image": "ghcr.io/cs50/codespace:1c901aa26166aa413bb3c153fa2e3082254dbc94", 
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand", 
   "settings": {
     "C_Cpp.autocomplete": "Disabled", 
