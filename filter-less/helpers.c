@@ -123,37 +123,67 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // Left
             if (j != 0)
             {
-                left = copy[i][(width - 1)];
+                // Blue
+                left.rgbtBlue = copy[i][(width - 1)].rgbtBlue;
+                // Green
+                left.rgbtGreen = copy[i][(width - 1)].rgbtGreen;
+                // Red
+                left.rgbtRed = copy[i][(width - 1)].rgbtRed;
             }
 
             // Right
             if (j != width)
             {
-                right = copy[i][width + 1];
+                // Blue
+                right.rgbtBlue = copy[i][width + 1].rgbtBlue;
+                // Green
+                right.rgbtGreen = copy[i][width + 1].rgbtGreen;
+                // Red
+                right.rgbtRed = copy[i][width + 1].rgbtRed;
             }
 
             // Up
             if (i != 0)
             {
-                up = copy[(height - 1)][j];
+                // Blue
+                up.rgbtBlue = copy[(height - 1)][j].rgbtBlue;
+                // Green
+                up.rgbtGreen = copy[(height - 1)][j].rgbtGreen;
+                // Red
+                up.rgbtRed = copy[(height - 1)][j].rgbtRed;
             }
 
             // Down
             if (i != height)
             {
-                down = copy[(height + 1)][j];
+                // Blue
+                down.rgbtBlue = copy[(height + 1)][j].rgbtBlue;
+                // Green
+                down.rgbtGreen = copy[(height + 1)][j].rgbtGreen;
+                // Red
+                down.rgbtRed = copy[(height + 1)][j].rgbtRed;
             }
 
             // up_left
             if (i != 0 && j != 0)
             {
-                up_left = copy[(height - 1)][(width - 1)];
+                // Blue
+                up_left.rgbtBlue = copy[(height - 1)][(width - 1)].rgbtBlue;
+                // Green
+                up_left.rgbtGreen = copy[(height - 1)][(width - 1)].rgbtGreen;
+                // Red
+                up_left.rgbtRed = copy[(height - 1)][(width - 1)].rgbtRed;
             }
 
             // down_left
             if (i != height && j != 0)
             {
-                down_left = copy[(height + 1)][(width -1)];
+                // Blue
+                down_left.rgbtBlue = copy[(height + 1)][(width -1)].rgbtBlue;
+                // Green
+                down_left.rgbtGreen = copy[(height + 1)][(width -1)].rgbtGreen;
+                // Red
+                down_left.rgbtRed = copy[(height + 1)][(width -1)].rgbtRed;
             }
 
             // up_right
