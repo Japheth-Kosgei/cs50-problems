@@ -93,16 +93,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j ++) // Loop through all the columns in that row
         {
-            // Copy the pixels to new array
-            copy[i][j].rgbtBlue = image[i][j].rgbtBlue;
-            copy[i][j].rgbtGreen = image[i][j].rgbtGreen;
-            copy[i][j].rgbtRed = image[i][j].rgbtRed;
-
-            // For purposes of debugging
+             // For purposes of debugging
             int blue = copy[i][j].rgbtBlue;
             int green = copy[i][j].rgbtGreen;
             int red = copy[i][j].rgbtRed;
 
+            // Copy the pixels to new array
+            copy[i][j].rgbtBlue = image[i][j].rgbtBlue;
+            copy[i][j].rgbtGreen = image[i][j].rgbtGreen;
+            copy[i][j].rgbtRed = image[i][j].rgbtRed;
         }
     }
 
