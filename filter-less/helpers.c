@@ -208,6 +208,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 down_right.rgbtRed = copy[(height + 1)][(width + 1)].rgbtRed;
             }
 
+            
+
             // Compute the blur
             // Extreme up_left
             if (i == 0 && j == 0)
