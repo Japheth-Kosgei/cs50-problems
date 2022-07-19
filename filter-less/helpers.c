@@ -124,7 +124,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             if (j != 0)
             {
                 // Blue
-                // 
+                left. = copy[i][(width - 1)];
+                // Green
+                left = copy[i][(width - 1)];
+                // Red
                 left = copy[i][(width - 1)];
             }
 
