@@ -98,6 +98,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             copy[i][j].rgbtGreen = image[i][j].rgbtGreen;
             copy[i][j].rgbtRed = image[i][j].rgbtRed;
 
+            // For purposes of debugging
+            int blue = copy[i][j].rgbtBlue;
+            int green = copy[i][j].rgbtGreen;
+            int red = copy[i][j].rgbtRed;
+
         }
     }
 
@@ -208,7 +213,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 down_right.rgbtRed = copy[(height + 1)][(width + 1)].rgbtRed;
             }
 
-            
+
 
             // Compute the blur
             // Extreme up_left
