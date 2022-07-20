@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-float average (int array);
+float average (int array[]);
 
 int main(void)
 {
@@ -14,7 +14,7 @@ int main(void)
     printf("Array3: %f\n", average(array3));
 }
 
-float average (int array)
+float average (int array[])
 {
     int len = sizeof(array) / sizeof(int);
     int sum = 0;
