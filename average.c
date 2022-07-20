@@ -1,23 +1,23 @@
 #include <stdio.h>
 
-double average (double array[]);
+float average (float array[]);
 
 int main(void)
 {
     // Do some averages
-    double array1[] = {2, 1, 2};
-    double array2[] = {7, 6, 6};
-    double array3[] = {8, 5, 7};
+    float array1[] = {0, 0, 2};
+    float array2[] = {7, 6, 6};
+    float array3[] = {8, 5, 7};
 
-    printf("Array1: %.2f\n", average(array1));
+    printf("Array1: %6.6f\n", average(array1));
     printf("Array2: %.2f\n", average(array2));
-    printf("Array3: %.2f\n", average(array3));
+    printf("Array3: %6.2f\n", average(array3));
 }
 
-double average (double array[])
+float average (float array[])
 {
-    double len = sizeof(*array) / sizeof(int);
-    double sum = 0;
+    float len = sizeof(*array) / sizeof(int);
+    float sum = 0;
 
     for (int i = 0; i < len; i ++)
     {
