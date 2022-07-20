@@ -263,7 +263,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtRed = round(((float)up.rgbtRed + up_left.rgbtRed + left.rgbtRed + down_left.rgbtRed + down.rgbtRed)/ 5.0);
             }
 
-            // All other pixels
+            // All other pixels (Middle pixel)
             else
             {
                 // Blue
