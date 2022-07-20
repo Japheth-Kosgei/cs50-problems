@@ -124,7 +124,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Right
-            if (j != width)
+            if (j != width - 1)
             {
                 // Blue
                 right = copy[i][width + 1];
@@ -138,7 +138,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Down
-            if (i != height)
+            if (i != height - 1)
             {
                 // Blue
                 down = copy[(height + 1)][j];
@@ -152,21 +152,21 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // down_left
-            if (i != height && j != 0)
+            if (i != height - 1 && j != 0)
             {
                 // Blue
                 down_left = copy[(height + 1)][(width -1)];
             }
 
             // up_right
-            if (i != 0 && j != width)
+            if (i != 0 && j != width - 1)
             {
                 // Blue
                 up_right = copy[(height - 1)][(width + 1)];
             }
 
             // down_right
-            if (i != height && j != width)
+            if (i != height - 1 && j != width - 1)
             {
                 // Blue
                 down_right = copy[(height + 1)][(width + 1)];
@@ -187,7 +187,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Extreme up_right
-            else if (i == 0 && j == width)
+            else if (i == 0 && j == width - 1)
             {
                 // Blue
                 image[i][j].rgbtBlue = round(((float)left.rgbtBlue + down_left.rgbtBlue + down.rgbtBlue) / 3.0);
@@ -198,7 +198,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Extreme down-left
-            else if (i == height && j == 0)
+            else if (i == height - 1 && j == 0)
             {
                 // Blue
                 image[i][j].rgbtBlue = round(((float)up.rgbtBlue + up_right.rgbtBlue + right.rgbtBlue) / 3.0);
@@ -209,7 +209,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Extreme down_right
-            else if (i == 0 && j == width)
+            else if (i == 0 && j == width - 1)
             {
                 // Blue
                 image[i][j].rgbtBlue = round(((float)up.rgbtBlue + up_left.rgbtBlue + left.rgbtBlue)/ 3.0);
@@ -220,7 +220,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Up edge
-            else if (i == 0 && j != width && j != 0)
+            else if (i == 0 && j != width - 1 && j != 0)
             {
                 // Blue
                 image[i][j].rgbtBlue = round((left.rgbtBlue + down_left.rgbtBlue + down.rgbtBlue + down_right.rgbtBlue + right.rgbtBlue)/ 5.0);
@@ -231,7 +231,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Down edge
-            else if (i == height && j != width && j != 0)
+            else if (i == height - 1 && j != width - 1 && j != 0)
             {
                 // Blue
                 image[i][j].rgbtBlue = round(((float)left.rgbtBlue + up_left.rgbtBlue + up.rgbtBlue + up_right.rgbtBlue + right.rgbtBlue)/ 5.0);
@@ -242,7 +242,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Left edge
-            else if (i != 0 && i != height && j == 0)
+            else if (i != 0 && i != height - 1 && j == 0)
             {
                 // Blue
                 image[i][j].rgbtBlue = round(((float)up.rgbtBlue + up_right.rgbtBlue + right.rgbtBlue + down_right.rgbtBlue + down.rgbtBlue)/ 5.0);
@@ -253,7 +253,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Right edge
-            else if (i != 0 && i != height && j == width)
+            else if (i != 0 && i != height - 1 && j == width - 1)
             {
                 // Blue
                 image[i][j].rgbtBlue = round(((float)up.rgbtBlue + up_left.rgbtBlue + left.rgbtBlue + down_left.rgbtBlue + down.rgbtBlue)/ 5.0);
