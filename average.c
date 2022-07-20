@@ -16,7 +16,7 @@ int main(void)
 
 float average (int array[])
 {
-    int len = *sizeof(array) / sizeof(int);
+    int len = *sizeof(array) / *sizeof(int);
     int sum = 0;
     int count = 0;
 
