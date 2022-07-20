@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 typedef struct
 {
@@ -24,11 +25,11 @@ int main(void)
     // Average
     rgb average;
     // Red
-    average.red = (array[0].red + array[1].red) / 2.0;
+    average.red = round((array[0].red + array[1].red) / 3.0);
     // Green
-    average.green = (array[0].green + array[1].green) / 2.0;
+    average.green = round((array[0].green + array[1].green) / 3.0);
     // Blue
-    average.blue = (array[0].blue + array[1].blue) / 2.0;
+    average.blue = round((array[0].blue + array[1].blue) / 3.0);
 
     printf("Red:   %2f\n", average.red);
     printf("Green: %2f\n", average.green);
