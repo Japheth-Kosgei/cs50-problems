@@ -93,14 +93,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j ++) // Loop through all the columns in that row
         {
             // Copy the pixels to new array
-            copy[i][j].rgbtBlue = image[i][j].rgbtBlue;
-            int blue = copy[i][j].rgbtBlue;
-
-            copy[i][j].rgbtGreen = image[i][j].rgbtGreen;
-            int green = copy[i][j].rgbtGreen;
-
-            copy[i][j].rgbtRed = image[i][j].rgbtRed;
-            int red = copy[i][j].rgbtRed;
+            copy[i][j] = image[i][j];
         }
     }
 
@@ -127,88 +120,56 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             if (j != 0)
             {
                 // Blue
-                left.rgbtBlue = copy[i][(width - 1)].rgbtBlue;
-                // Green
-                left.rgbtGreen = copy[i][(width - 1)].rgbtGreen;
-                // Red
-                left.rgbtRed = copy[i][(width - 1)].rgbtRed;
+                left = copy[i][(width - 1)];
             }
 
             // Right
             if (j != width)
             {
                 // Blue
-                right.rgbtBlue = copy[i][width + 1].rgbtBlue;
-                // Green
-                right.rgbtGreen = copy[i][width + 1].rgbtGreen;
-                // Red
-                right.rgbtRed = copy[i][width + 1].rgbtRed;
+                right = copy[i][width + 1];
             }
 
             // Up
             if (i != 0)
             {
                 // Blue
-                up.rgbtBlue = copy[(height - 1)][j].rgbtBlue;
-                // Green
-                up.rgbtGreen = copy[(height - 1)][j].rgbtGreen;
-                // Red
-                up.rgbtRed = copy[(height - 1)][j].rgbtRed;
+                up = copy[(height - 1)][j];
             }
 
             // Down
             if (i != height)
             {
                 // Blue
-                down.rgbtBlue = copy[(height + 1)][j].rgbtBlue;
-                // Green
-                down.rgbtGreen = copy[(height + 1)][j].rgbtGreen;
-                // Red
-                down.rgbtRed = copy[(height + 1)][j].rgbtRed;
+                down = copy[(height + 1)][j];
             }
 
             // up_left
             if (i != 0 && j != 0)
             {
                 // Blue
-                up_left.rgbtBlue = copy[(height - 1)][(width - 1)].rgbtBlue;
-                // Green
-                up_left.rgbtGreen = copy[(height - 1)][(width - 1)].rgbtGreen;
-                // Red
-                up_left.rgbtRed = copy[(height - 1)][(width - 1)].rgbtRed;
+                up_left = copy[(height - 1)][(width - 1)];
             }
 
             // down_left
             if (i != height && j != 0)
             {
                 // Blue
-                down_left.rgbtBlue = copy[(height + 1)][(width -1)].rgbtBlue;
-                // Green
-                down_left.rgbtGreen = copy[(height + 1)][(width -1)].rgbtGreen;
-                // Red
-                down_left.rgbtRed = copy[(height + 1)][(width -1)].rgbtRed;
+                down_left = copy[(height + 1)][(width -1)];
             }
 
             // up_right
             if (i != 0 && j != width)
             {
                 // Blue
-                up_right.rgbtBlue = copy[(height - 1)][(width + 1)].rgbtBlue;
-                // Green
-                up_right.rgbtGreen = copy[(height - 1)][(width + 1)].rgbtGreen;
-                // Red
-                up_right.rgbtRed = copy[(height - 1)][(width + 1)].rgbtRed;
+                up_right = copy[(height - 1)][(width + 1)];
             }
 
             // down_right
             if (i != height && j != width)
             {
                 // Blue
-                down_right.rgbtBlue = copy[(height + 1)][(width + 1)].rgbtBlue;
-                // Green
-                down_right.rgbtGreen = copy[(height + 1)][(width + 1)].rgbtGreen;
-                // Red
-                down_right.rgbtRed = copy[(height + 1)][(width + 1)].rgbtRed;
+                down_right = copy[(height + 1)][(width + 1)];
             }
 
 
