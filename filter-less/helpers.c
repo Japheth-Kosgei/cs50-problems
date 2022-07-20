@@ -110,12 +110,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     // for (each pixel)
     // Assign values to the variables of the surrounding pixels
-    // Compute the blur
-    // Update the original image's pixel values
     for (int i =0; i < height; i ++) // Loop through all rows
     {
         for (int j =0; j < width; j ++) // Loop through all the columns within the current row
         {
+            int blue = image[i][j].rgbtBlue;
+            int red = image[i][j].rgbtRed;
+            int green = image[i][j].rgbtGreen;
+
+            
             // Left
             if (j != 0)
             {

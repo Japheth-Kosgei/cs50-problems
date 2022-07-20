@@ -11,27 +11,11 @@ rgb;
 
 int main(void)
 {
-    // Make a data structure similar to rgb and do average
-    rgb array[2];
-
-    array[0].red = 0;
-    array[0].green = 0;
-    array[0].blue = 0;
-
-    array[1].red = 10;
-    array[1].green = 10;
-    array[1].blue = 10;
-
-    // Average
-    rgb average;
-    // Red
-    average.red = round((array[0].red + array[1].red) / 3.0);
-    // Green
-    average.green = round((array[0].green + array[1].green) / 3.0);
+    // Test sum
     // Blue
-    average.blue = round((array[0].blue + array[1].blue) / 3.0);
-
-    printf("Red:   %2f\n", average.red);
-    printf("Green: %2f\n", average.green);
-    printf("Blue:  %2f\n", average.blue);
+    image[i][j].rgbtBlue = round((up.rgbtBlue + down.rgbtBlue + left.rgbtBlue + right.rgbtBlue + up_left.rgbtBlue + up_right.rgbtBlue + down_left.rgbtBlue + down_right.rgbtBlue)/ 8.0);
+    // Green
+    image[i][j].rgbtGreen = round((up.rgbtGreen + down.rgbtGreen + left.rgbtGreen + right.rgbtGreen + up_left.rgbtGreen + up_right.rgbtGreen + down_left.rgbtGreen + down_right.rgbtGreen)/ 8.0);
+    // Red
+    image[i][j].rgbtRed = round((up.rgbtRed + down.rgbtRed + left.rgbtRed + right.rgbtRed + up_left.rgbtRed + up_right.rgbtRed + down_left.rgbtRed + down_right.rgbtRed)/ 8.0);
 }
