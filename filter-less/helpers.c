@@ -120,56 +120,56 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             if (j != 0)
             {
                 // Blue
-                left = copy[i][(width - 1)];
+                left = copy[i][(j - 1)];
             }
 
             // Right
             if (j != width - 1)
             {
                 // Blue
-                right = copy[i][width + 1];
+                right = copy[i][j + 1];
             }
 
             // Up
             if (i != 0)
             {
                 // Blue
-                up = copy[(height - 1)][j];
+                up = copy[(i - 1)][j];
             }
 
             // Down
             if (i != height - 1)
             {
                 // Blue
-                down = copy[(height + 1)][j];
+                down = copy[(i + 1)][j];
             }
 
             // up_left
             if (i != 0 && j != 0)
             {
                 // Blue
-                up_left = copy[(height - 1)][(width - 1)];
+                up_left = copy[(i - 1)][(j - 1)];
             }
 
             // down_left
             if (i != height - 1 && j != 0)
             {
                 // Blue
-                down_left = copy[(height + 1)][(width -1)];
+                down_left = copy[(i + 1)][(j -1)];
             }
 
             // up_right
             if (i != 0 && j != width - 1)
             {
                 // Blue
-                up_right = copy[(height - 1)][(width + 1)];
+                up_right = copy[(i - 1)][(j + 1)];
             }
 
             // down_right
             if (i != height - 1 && j != width - 1)
             {
                 // Blue
-                down_right = copy[(height + 1)][(width + 1)];
+                down_right = copy[(i + 1)][(j + 1)];
             }
 
 
