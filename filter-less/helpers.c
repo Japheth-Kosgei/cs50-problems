@@ -231,11 +231,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 // Blue
                 image[i][j].rgbtBlue = round((left.rgbtBlue + down_left.rgbtBlue + down.rgbtBlue + down_right.rgbtBlue + right.rgbtBlue)/ 5.0);
+                printf("Blue:  %i\n", image[i][j].rgbtBlue);
                 // Green
                 image[i][j].rgbtGreen = round((left.rgbtGreen + down_left.rgbtGreen + down.rgbtGreen + down_right.rgbtGreen + right.rgbtGreen)/ 5.0);
+                printf("Green: %i\n", image[i][j].rgbtGreen);
                 // Red
                 image[i][j].rgbtRed = round((left.rgbtRed + down_left.rgbtRed + down.rgbtRed + down_right.rgbtRed + right.rgbtRed)/ 5.0);
+                printf("Red:   %i\n", image[i][j].rgbtRed);
             }
+
 
             // Down edge
             else if (i == height - 1 && j != width - 1 && j != 0)
