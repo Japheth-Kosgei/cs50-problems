@@ -9,14 +9,14 @@ int main(void)
     int array2[] = {7, 6, 6};
     int array3[] = {8, 5, 7};
 
-    printf("Array1: %f\n", average(array1));
-    printf("Array2: %f\n", average(array2));
-    printf("Array3: %f\n", average(array3));
+    printf("Array1: %f\n", average(&array1));
+    printf("Array2: %f\n", average(&array2));
+    printf("Array3: %f\n", average(&array3));
 }
 
-float average (int array[])
+float average (int *array[])
 {
-    int len = *sizeof(array) / *sizeof(int);
+    int len = sizeof(array) / sizeof(int);
     int sum = 0;
     int count = 0;
 
