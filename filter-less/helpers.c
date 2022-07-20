@@ -77,7 +77,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j ++) // Loop through all the columns
         {
             // rgbtBlue
-            image[i][j] = image[i][(width - (j + 1))];
+            image[i][j] = copy[i][(width - (j + 1))];
         }
     }
     return;
