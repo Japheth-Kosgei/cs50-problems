@@ -125,6 +125,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 // Blue
                 left = copy[i][(j - 1)];
+                printf("Left: %i\n", left);
             }
 
             // Right
@@ -132,6 +133,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 // Blue
                 right = copy[i][j + 1];
+                printf("Right: %i\n", right);
             }
 
             // Up
@@ -139,6 +141,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 // Blue
                 up = copy[(i - 1)][j];
+                printf("Up: %i\n", blue);
             }
 
             // Down
@@ -146,6 +149,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 // Blue
                 down = copy[(i + 1)][j];
+                printf("Down: %i\n", down);
             }
 
             // up_left
@@ -153,6 +157,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 // Blue
                 up_left = copy[(i - 1)][(j - 1)];
+                printf("Up_left %i\n", up_left);
             }
 
             // down_left
@@ -160,6 +165,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 // Blue
                 down_left = copy[(i + 1)][(j - 1)];
+                printf("Down_left %i\n", down_left);
             }
 
             // up_right
@@ -167,6 +173,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 // Blue
                 up_right = copy[(i - 1)][(j + 1)];
+                printf("Up_right %i\n", up_right);
             }
 
             // down_right
@@ -174,6 +181,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 // Blue
                 down_right = copy[(i + 1)][(j + 1)];
+                printf("Down_right %i\n", down_right);
             }
 
 
