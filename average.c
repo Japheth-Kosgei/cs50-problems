@@ -9,9 +9,9 @@ int main(void)
     double array2[] = {7, 6, 6};
     double array3[] = {8, 5, 7};
 
-    printf("Array1: %.6lf\n", average(array1));
-    printf("Array2: %.6lf\n", average(array2));
-    printf("Array3: %.6lf\n", average(array3));
+    printf("Array1: %.2f\n", average(array1));
+    printf("Array2: %.2f\n", average(array2));
+    printf("Array3: %.2f\n", average(array3));
 }
 
 double average (double array[])
