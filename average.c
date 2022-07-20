@@ -16,11 +16,11 @@ int main(void)
 
 float average (int array[])
 {
-    int len = sizeof(array) / sizeof(int);
+    int len = sizeof(*array) / sizeof(int);
     float sum = 0;
     int count = 0;
 
-    for (int i = 0; i < *len; i ++)
+    for (int i = 0; i < len; i ++)
     {
         sum += array[i];
         count ++;
