@@ -7,5 +7,7 @@ int main(void)
     int array2[] = {7, 6, 6};
     int array3[] = {8, 5, 7};
 
-    int av_array1 = 
+    printf("Array1: %f\n", (array1[0] + array1[1] + array1[2]) / 3.0);
+    printf("Array2: %f\n", (array2[0] + array2[1] + array2[2]) / 3.0);
+    printf("Array3: %f\n", (array3[0] + array3[1] + array3[2]) / 3.0);
 }
