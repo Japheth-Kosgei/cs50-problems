@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int average (int array);
+float average (int array);
 
 int main(void)
 {
@@ -9,18 +9,22 @@ int main(void)
     int array2[] = {7, 6, 6};
     int array3[] = {8, 5, 7};
 
-    printf("Array1: %f\n", (array1[0] + array1[1] + array1[2]) / 3.0);
-    printf("Array2: %f\n", (array2[0] + array2[1] + array2[2]) / 3.0);
-    printf("Array3: %f\n", (array3[0] + array3[1] + array3[2]) / 3.0);
+    printf("Array1: %f\n", average(array1));
+    printf("Array2: %f\n", average(array2));
+    printf("Array3: %f\n", average(array3));
 }
 
-int average (int array)
+float average (int array)
 {
     int len = sizeof(array) / sizeof(int);
-    int sum 0;
+    int sum = 0;
+    int count = 0;
 
     for (int i = 0; i < len; i ++)
     {
         sum += array[i];
+        count ++;
     }
+
+    return (sum / count);
 }
