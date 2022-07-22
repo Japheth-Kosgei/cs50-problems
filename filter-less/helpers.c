@@ -243,9 +243,10 @@ double do_average(double *array)
     double len = (sizeof(*array) / sizeof(int));
     sum = 0;
 
+    // Red
     for (int i = 0; i < len)
     {
-        sum += 
+        sum +=
     }
     // Return a number rounded off to the nearest integer
 }
