@@ -161,6 +161,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     // Calculate the average and update the value of the original image's pixels
     // Right edge
+    if ()
     // Left edge
     // Up edge
     // Down edge
