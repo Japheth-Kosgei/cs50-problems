@@ -183,13 +183,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             if (i == 0 && j == 0)
             {
                 // Blue
-                image[i][j].rgbtBlue = round(((float)right.rgbtBlue + down_right.rgbtBlue + down.rgbtBlue) / 3.0);
+                image[i][j].rgbtBlue = round(((double)right.rgbtBlue + down_right.rgbtBlue + down.rgbtBlue) / 3.0);
                 printf("Blue:  %i\n", image[i][j].rgbtBlue);
                 // Red
-                image[i][j].rgbtRed = round(((float)right.rgbtRed + down_right.rgbtRed + down.rgbtRed) / 3.0);
+                image[i][j].rgbtRed = round(((double)right.rgbtRed + down_right.rgbtRed + down.rgbtRed) / 3.0);
                 printf("Red:   %i\n", image[i][j].rgbtRed);
                 // Green
-                image[i][j].rgbtGreen = round(((float)right.rgbtGreen + down_right.rgbtGreen + down.rgbtGreen) / 3.0);
+                image[i][j].rgbtGreen = round(((double)right.rgbtGreen + down_right.rgbtGreen + down.rgbtGreen) / 3.0);
                 printf("Green: %i\n", image[i][j].rgbtGreen);
             }
 
@@ -197,33 +197,33 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             else if (i == 0 && j == width - 1)
             {
                 // Blue
-                image[i][j].rgbtBlue = round(((float)left.rgbtBlue + down_left.rgbtBlue + down.rgbtBlue) / 3.0);
+                image[i][j].rgbtBlue = round(((double)left.rgbtBlue + down_left.rgbtBlue + down.rgbtBlue) / 3.0);
                 // Green
-                image[i][j].rgbtGreen = round(((float)left.rgbtGreen + down_left.rgbtGreen + down.rgbtGreen)/ 3.0);
+                image[i][j].rgbtGreen = round(((double)left.rgbtGreen + down_left.rgbtGreen + down.rgbtGreen)/ 3.0);
                 // Red
-                image[i][j].rgbtRed = round(((float)left.rgbtRed + down_left.rgbtRed + down.rgbtRed) / 3.0);
+                image[i][j].rgbtRed = round(((double)left.rgbtRed + down_left.rgbtRed + down.rgbtRed) / 3.0);
             }
 
             // Extreme down-left
             else if (i == height - 1 && j == 0)
             {
                 // Blue
-                image[i][j].rgbtBlue = round(((float)up.rgbtBlue + up_right.rgbtBlue + right.rgbtBlue) / 3.0);
+                image[i][j].rgbtBlue = round(((double)up.rgbtBlue + up_right.rgbtBlue + right.rgbtBlue) / 3.0);
                 // Green
-                image[i][j].rgbtGreen = round(((float)up.rgbtGreen + up_right.rgbtGreen + right.rgbtGreen) / 3.0);
+                image[i][j].rgbtGreen = round(((double)up.rgbtGreen + up_right.rgbtGreen + right.rgbtGreen) / 3.0);
                 // Red
-                image[i][j].rgbtRed = round(((float)up.rgbtRed + up_right.rgbtRed + right.rgbtRed) / 3.0);
+                image[i][j].rgbtRed = round(((double)up.rgbtRed + up_right.rgbtRed + right.rgbtRed) / 3.0);
             }
 
             // Extreme down_right
             else if (i == 0 && j == width - 1)
             {
                 // Blue
-                image[i][j].rgbtBlue = round(((float)up.rgbtBlue + up_left.rgbtBlue + left.rgbtBlue)/ 3.0);
+                image[i][j].rgbtBlue = round(((double)up.rgbtBlue + up_left.rgbtBlue + left.rgbtBlue)/ 3.0);
                 // Green
-                image[i][j].rgbtGreen = round(((float)up.rgbtGreen + up_left.rgbtGreen + left.rgbtGreen)/ 3.0);
+                image[i][j].rgbtGreen = round(((double)up.rgbtGreen + up_left.rgbtGreen + left.rgbtGreen)/ 3.0);
                 // Red
-                image[i][j].rgbtRed = round(((float)up.rgbtRed + up_left.rgbtRed + left.rgbtRed)/ 3.0);
+                image[i][j].rgbtRed = round(((double)up.rgbtRed + up_left.rgbtRed + left.rgbtRed)/ 3.0);
             }
 
             // Up edge
@@ -245,33 +245,33 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             else if (i == height - 1 && j != width - 1 && j != 0)
             {
                 // Blue
-                image[i][j].rgbtBlue = round(((float)left.rgbtBlue + up_left.rgbtBlue + up.rgbtBlue + up_right.rgbtBlue + right.rgbtBlue)/ 5.0);
+                image[i][j].rgbtBlue = round(((double)left.rgbtBlue + up_left.rgbtBlue + up.rgbtBlue + up_right.rgbtBlue + right.rgbtBlue)/ 5.0);
                 // Green
-                image[i][j].rgbtGreen = round(((float)left.rgbtGreen + up_left.rgbtGreen + up.rgbtGreen + up_right.rgbtGreen + right.rgbtGreen)/ 5.0);
+                image[i][j].rgbtGreen = round(((double)left.rgbtGreen + up_left.rgbtGreen + up.rgbtGreen + up_right.rgbtGreen + right.rgbtGreen)/ 5.0);
                 // Red
-                image[i][j].rgbtRed = round(((float)left.rgbtRed + up_left.rgbtRed + up.rgbtRed + up_right.rgbtRed + right.rgbtRed)/ 5.0);
+                image[i][j].rgbtRed = round(((double)left.rgbtRed + up_left.rgbtRed + up.rgbtRed + up_right.rgbtRed + right.rgbtRed)/ 5.0);
             }
 
             // Left edge
             else if (i != 0 && i != height - 1 && j == 0)
             {
                 // Blue
-                image[i][j].rgbtBlue = round(((float)up.rgbtBlue + up_right.rgbtBlue + right.rgbtBlue + down_right.rgbtBlue + down.rgbtBlue)/ 5.0);
+                image[i][j].rgbtBlue = round(((double)up.rgbtBlue + up_right.rgbtBlue + right.rgbtBlue + down_right.rgbtBlue + down.rgbtBlue)/ 5.0);
                 // Green
-                image[i][j].rgbtGreen = round(((float)up.rgbtGreen + up_right.rgbtGreen + right.rgbtGreen + down_right.rgbtGreen + down.rgbtGreen)/ 5.0);
+                image[i][j].rgbtGreen = round(((double)up.rgbtGreen + up_right.rgbtGreen + right.rgbtGreen + down_right.rgbtGreen + down.rgbtGreen)/ 5.0);
                 // Red
-                image[i][j].rgbtRed = round(((float)up.rgbtRed + up_right.rgbtRed + right.rgbtRed + down_right.rgbtRed + down.rgbtRed)/ 5.0);
+                image[i][j].rgbtRed = round(((double)up.rgbtRed + up_right.rgbtRed + right.rgbtRed + down_right.rgbtRed + down.rgbtRed)/ 5.0);
             }
 
             // Right edge
             else if (i != 0 && i != height - 1 && j == width - 1)
             {
                 // Blue
-                image[i][j].rgbtBlue = round(((float)up.rgbtBlue + up_left.rgbtBlue + left.rgbtBlue + down_left.rgbtBlue + down.rgbtBlue)/ 5.0);
+                image[i][j].rgbtBlue = round(((double)up.rgbtBlue + up_left.rgbtBlue + left.rgbtBlue + down_left.rgbtBlue + down.rgbtBlue)/ 5.0);
                 // Green
-                image[i][j].rgbtGreen = round(((float)up.rgbtGreen + up_left.rgbtGreen + left.rgbtGreen + down_left.rgbtGreen + down.rgbtGreen)/ 5.0);
+                image[i][j].rgbtGreen = round(((double)up.rgbtGreen + up_left.rgbtGreen + left.rgbtGreen + down_left.rgbtGreen + down.rgbtGreen)/ 5.0);
                 // Red
-                image[i][j].rgbtRed = round(((float)up.rgbtRed + up_left.rgbtRed + left.rgbtRed + down_left.rgbtRed + down.rgbtRed)/ 5.0);
+                image[i][j].rgbtRed = round(((double)up.rgbtRed + up_left.rgbtRed + left.rgbtRed + down_left.rgbtRed + down.rgbtRed)/ 5.0);
             }
 
             // All other pixels (Middle pixel)
