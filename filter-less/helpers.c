@@ -142,7 +142,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // Up_right
     if (i != 0 && j != (width - 1))
     {
-        
+        up_right = copy
     }
     // Down_left
     // Down_right
