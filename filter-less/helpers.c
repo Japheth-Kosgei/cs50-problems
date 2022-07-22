@@ -3,6 +3,8 @@
 
 #include "helpers.h"
 
+double do_average(double *array);
+
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -170,7 +172,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-double average(double *array)
+double do_average(double *array)
 {
     // Do average
 }
