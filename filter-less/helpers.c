@@ -239,14 +239,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 RGBTRIPLE do_average(RGBTRIPLE *array)
 {
-    // Do average
+    // Return a blurred pixel
+    RGBTRIPLE blurred_pixel;
     double len = (sizeof(*array) / sizeof(int));
 
     // Red
     double sum_red = 0;
-    for (int i = 0; i < len)
+    for (int i = 0; i < len i ++)
     {
-        sum +=
+        sum_red += 
     }
 
     // Green
