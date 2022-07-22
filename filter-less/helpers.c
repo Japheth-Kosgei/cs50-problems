@@ -111,127 +111,133 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE down_right;
 
     // Assign values to the variables based on the copy[i][j]
-    // Left
-    if (j != 0)
+    for (int i = 0; i < height; i ++) // Height stuff
     {
-        left = copy[i][j - 1];
-    }
+        for (int j = 0; j < width; j ++)
+        {
+            // Left
+            if (j != 0)
+            {
+                left = copy[i][j - 1];
+            }
 
-    // Right
-    if (j != (width - 1))
-    {
-        right = copy[i][j + 1];
-    }
+            // Right
+            if (j != (width - 1))
+            {
+                right = copy[i][j + 1];
+            }
 
-    // Down
-    if (i != (height - 1))
-    {
-        down = copy[i + 1][j];
-    }
+            // Down
+            if (i != (height - 1))
+            {
+                down = copy[i + 1][j];
+            }
 
-    // Up
-    if (i != 0)
-    {
-        up = copy[i - 1][j];
-    }
+            // Up
+            if (i != 0)
+            {
+                up = copy[i - 1][j];
+            }
 
-    // Up_left
-    if (i != 0 && j != 0)
-    {
-        up_left = copy[i - 1][j - 1;]
-    }
+            // Up_left
+            if (i != 0 && j != 0)
+            {
+                up_left = copy[i - 1][j - 1;]
+            }
 
-    // Up_right
-    if (i != 0 && j != (width - 1))
-    {
-        up_right = copy[i - 1][j + 1];
-    }
+            // Up_right
+            if (i != 0 && j != (width - 1))
+            {
+                up_right = copy[i - 1][j + 1];
+            }
 
-    // Down_left
-    if (i != (height - 1) && j != 0)
-    {
-        down_left = copy[i + 1][j - 1];
-    }
+            // Down_left
+            if (i != (height - 1) && j != 0)
+            {
+                down_left = copy[i + 1][j - 1];
+            }
 
-    // Down_right
-    if (i != (height - 1) && j != (width - 1))
-    {
-        down_left = copy[i + 1][j + 1];
-    }
+            // Down_right
+            if (i != (height - 1) && j != (width - 1))
+            {
+                down_left = copy[i + 1][j + 1];
+            }
 
 
 
-    // Calculate the average and update the value of the original image's pixels
-    // Right edge
-    if (i != 0 && i != (height - 1) && j == (width - 1))
-    {
-        RGBTRIPLE neighbors[] = {up, up_left, left, down_left, down};
-        average = do_average(&neighbors);
-        image[i][j] = average;
-    }
+            // Calculate the average and update the value of the original image's pixels
+            // Right edge
+            if (i != 0 && i != (height - 1) && j == (width - 1))
+            {
+                RGBTRIPLE neighbors[] = {up, up_left, left, down_left, down};
+                average = do_average(&neighbors);
+                image[i][j] = average;
+            }
 
-    // Left edge
-    else if (i != 0 && i != (height - 1) && j == 0)
-    {
-        RGBTRIPLE neighbors[] = {up, up_right, right, down_right, down};
-        average = do_average(&neighbors);
-        image[i][j] = average;
-    }
+            // Left edge
+            else if (i != 0 && i != (height - 1) && j == 0)
+            {
+                RGBTRIPLE neighbors[] = {up, up_right, right, down_right, down};
+                average = do_average(&neighbors);
+                image[i][j] = average;
+            }
 
-    // Up edge
-    else if (i == 0 && j != (width - 1) && j != 0)
-    {
-        RGBTRIPLE neighbors[] = {right, down_right, down, down_left, left};
-        average = do_average(&neighbors);
-        image[i][j] = average;
-    }
+            // Up edge
+            else if (i == 0 && j != (width - 1) && j != 0)
+            {
+                RGBTRIPLE neighbors[] = {right, down_right, down, down_left, left};
+                average = do_average(&neighbors);
+                image[i][j] = average;
+            }
 
-    // Down edge
-    else if (i == (height - 1) && j != (width - 1) && j != 0)
-    {
-        RGBTRIPLE neighbors[] = {left, up_left, up, up_right, right};
-        average = do_average(&neighbors);
-        image[i][j] = average;
-    }
+            // Down edge
+            else if (i == (height - 1) && j != (width - 1) && j != 0)
+            {
+                RGBTRIPLE neighbors[] = {left, up_left, up, up_right, right};
+                average = do_average(&neighbors);
+                image[i][j] = average;
+            }
 
-    // Extreme up-right
-    else if (i == 0 && j == (width - 1))
-    {
-        RGBTRIPLE neighbors[] = {left, down_left, down};
-        average = do_average(&neighbors);
-        image[i][j] = average;
-    }
+            // Extreme up-right
+            else if (i == 0 && j == (width - 1))
+            {
+                RGBTRIPLE neighbors[] = {left, down_left, down};
+                average = do_average(&neighbors);
+                image[i][j] = average;
+            }
 
-    // Extreme up-left
-    else if (i == 0 && j == 0)
-    {
-        RGBTRIPLE neighbors[] = {right, down_right, down};
-        average = do_average(&neighbors);
-        image[i][j] = average;
-    }
+            // Extreme up-left
+            else if (i == 0 && j == 0)
+            {
+                RGBTRIPLE neighbors[] = {right, down_right, down};
+                average = do_average(&neighbors);
+                image[i][j] = average;
+            }
 
-    // Extreme down-left
-    else if (i == (height - 1) && j == 0)
-    {
-        RGBTRIPLE neighbors[] = {right, up_right, up};
-        average = do_average(&neighbors);
-        image[i][j] = average;
-    }
+            // Extreme down-left
+            else if (i == (height - 1) && j == 0)
+            {
+                RGBTRIPLE neighbors[] = {right, up_right, up};
+                average = do_average(&neighbors);
+                image[i][j] = average;
+            }
 
-    // Extreme down-right
-    else if (i == 0 && j == (width - 1))
-    {
-        RGBTRIPLE neighbors[] = {left, up_left, up};
-        average = do_average(&neighbors);
-        image[i][j] = average;
-    }
+            // Extreme down-right
+            else if (i == 0 && j == (width - 1))
+            {
+                RGBTRIPLE neighbors[] = {left, up_left, up};
+                average = do_average(&neighbors);
+                image[i][j] = average;
+            }
 
-    // Middle pixel
-    else
-    {
-        RGBTRIPLE neighbors[] = {up, left, right, down, up_left, up_right, down_left, down_right};
-        average = do_average(&neighbors);
-        image[i][j] = average;
+            // Middle pixel
+            else
+            {
+                RGBTRIPLE neighbors[] = {up, left, right, down, up_left, up_right, down_left, down_right};
+                average = do_average(&neighbors);
+                image[i][j] = average;
+            }
+        }
     }
 
     return;
