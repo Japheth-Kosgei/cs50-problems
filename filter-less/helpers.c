@@ -3,7 +3,7 @@
 
 #include "helpers.h"
 
-double do_average(double *array);
+double do_average( *array);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -237,16 +237,18 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-double do_average(double *array)
+double do_average( *array)
 {
     // Do average
     double len = (sizeof(*array) / sizeof(int));
-    sum = 0;
 
     // Red
+    double sum_red = 0;
     for (int i = 0; i < len)
     {
         sum +=
     }
-    // Return a number rounded off to the nearest integer
+
+    // Green
+    // Blue
 }
