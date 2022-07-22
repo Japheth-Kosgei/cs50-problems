@@ -175,4 +175,5 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 double do_average(double *array)
 {
     // Do average
+    // Return a number rounded off to the nearest integer
 }
