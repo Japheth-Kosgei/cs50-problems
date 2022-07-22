@@ -99,6 +99,24 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
 
     // Variables for the surrounding pixels
-    RGB
+    RGBTRIPLE left;
+    RGBTRIPLE right;
+    RGBTRIPLE down;
+    RGBTRIPLE up;
+    RGBTRIPLE up_left;
+    RGBTRIPLE up_right;
+    RGBTRIPLE down_left;
+    RGBTRIPLE down_right;
+
+    // Assign values to the variables based on the copy[i][j]
+    // Left
+    if ()
+    // Right
+    // Down
+    // Up
+    // Up_left
+    // Up_right
+    // Down_left
+    // Down_right
     return;
 }
