@@ -165,19 +165,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // Right edge
     if (i != 0 && i != (height - 1) && j == (width - 1))
     {
-        RGBTRIPLE neighbors[] = {}
+        RGBTRIPLE neighbors[] = {up, up_left, left, down_left, down};
     }
 
     // Left edge
     else if (i != 0 && i != (height - 1) && j == 0)
     {
-        //
+        RGBTRIPLE neighbors[] = {up, up_right, right, down_right, down};
     }
 
     // Up edge
     else if (i == 0 && j != (width - 1) && j != 0)
     {
-        //
+        RGBTRIPLE neighbors[] = {}
     }
 
     // Down edge
