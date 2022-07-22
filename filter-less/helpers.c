@@ -253,22 +253,22 @@ RGBTRIPLE do_average(RGBTRIPLE *array)
     blurred_pixel.rgbtRed = sum_red / len;
 
     // Green
-    double sum_red = 0;
+    double sum_green = 0;
     for (int i = 0; i < len i ++)
     {
-        sum_red += *array[i].rgbtRed;
+        sum_green += *array[i].rgbtGreen;
     }
 
-    blurred_pixel.rgbtRed = sum_red / len;
+    blurred_pixel.rgbtGreen = sum_green / len;
 
     // Blue
-    double sum_red = 0;
+    double sum_blue = 0;
     for (int i = 0; i < len i ++)
     {
-        sum_red += *array[i].rgbtRed;
+        sum_blue += *array[i].rgbtBlue;
     }
 
-    blurred_pixel.rgbtRed = sum_red / len;
+    blurred_pixel.rgbtGreen = sum_blue/ len;
 
     return blurred_pixel;
 }
