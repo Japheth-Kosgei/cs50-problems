@@ -242,7 +242,7 @@ RGBTRIPLE do_average(RGBTRIPLE *array)
 
     // Red
     double sum_red = 0;
-    for (int i = 0; i < len i ++)
+    for (int i = 0; i < len; i ++)
     {
         sum_red += *array[i].rgbtRed;
     }
