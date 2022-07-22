@@ -169,64 +169,64 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // Right edge
             if (i != 0 && i != (height - 1) && j == (width - 1))
             {
-                RGBTRIPLE *neighbors = {up, up_left, left, down_left, down};
-                image[i][j] = do_average(neighbors);
+                RGBTRIPLE neighbors[] = {up, up_left, left, down_left, down};
+                image[i][j] = do_average(&neighbors[]);
             }
 
             // Left edge
             else if (i != 0 && i != (height - 1) && j == 0)
             {
-                RGBTRIPLE *neighbors = {up, up_right, right, down_right, down};
-                image[i][j] = do_average(neighbors);
+                RGBTRIPLE neighbors[] = {up, up_right, right, down_right, down};
+                image[i][j] = do_average(&neighbors[]);
             }
 
             // Up edge
             else if (i == 0 && j != (width - 1) && j != 0)
             {
-                RGBTRIPLE *neighbors = {right, down_right, down, down_left, left};
-                image[i][j] = do_average(neighbors);
+                RGBTRIPLE neighbors[] = {right, down_right, down, down_left, left};
+                image[i][j] = do_average(&neighbors[]);
             }
 
             // Down edge
             else if (i == (height - 1) && j != (width - 1) && j != 0)
             {
-                RGBTRIPLE *neighbors = {left, up_left, up, up_right, right};
-                image[i][j] = do_average(neighbors);
+                RGBTRIPLE neighbors[] = {left, up_left, up, up_right, right};
+                image[i][j] = do_average(&neighbors[]);
             }
 
             // Extreme up-right
             else if (i == 0 && j == (width - 1))
             {
-                RGBTRIPLE *neighbors = {left, down_left, down};
-                image[i][j] = do_average(neighbors);
+                RGBTRIPLE neighbors[] = {left, down_left, down};
+                image[i][j] = do_average(&neighbors[]);
             }
 
             // Extreme up-left
             else if (i == 0 && j == 0)
             {
-                RGBTRIPLE *neighbors = {right, down_right, down};
-                image[i][j] = do_average(neighbors);
+                RGBTRIPLE neighbors[] = {right, down_right, down};
+                image[i][j] = do_average(&neighbors[]);
             }
 
             // Extreme down-left
             else if (i == (height - 1) && j == 0)
             {
-                RGBTRIPLE *neighbors = {right, up_right, up};
-                image[i][j] = do_average(neighbors);
+                RGBTRIPLE neighbors[] = {right, up_right, up};
+                image[i][j] = do_average(&neighbors[]);
             }
 
             // Extreme down-right
             else if (i == 0 && j == (width - 1))
             {
-                RGBTRIPLE *neighbors = {left, up_left, up};
-                image[i][j] = do_average(neighbors);
+                RGBTRIPLE neighbors[] = {left, up_left, up};
+                image[i][j] = do_average(&neighbors[]);
             }
 
             // Middle pixel
             else
             {
-                RGBTRIPLE *neighbors = {up, left, right, down, up_left, up_right, down_left, down_right};
-                image[i][j] = do_average(neighbors);
+                RGBTRIPLE neighbors[] = {up, left, right, down, up_left, up_right, down_left, down_right};
+                image[i][j] = do_average(&neighbors[]);
             }
         }
     }
@@ -242,7 +242,7 @@ RGBTRIPLE do_average(RGBTRIPLE *array)
 
     // Red
     double sum_red = 0;
-    for (int i = 0; i < len; i ++)
+    for (int i = 0; i < len i ++)
     {
         sum_red += *array[i].rgbtRed;
     }
@@ -251,7 +251,7 @@ RGBTRIPLE do_average(RGBTRIPLE *array)
 
     // Green
     double sum_green = 0;
-    for (int i = 0; i < len; i ++)
+    for (int i = 0; i < len i ++)
     {
         sum_green += *array[i].rgbtGreen;
     }
@@ -260,7 +260,7 @@ RGBTRIPLE do_average(RGBTRIPLE *array)
 
     // Blue
     double sum_blue = 0;
-    for (int i = 0; i < len; i ++)
+    for (int i = 0; i < len i ++)
     {
         sum_blue += *array[i].rgbtBlue;
     }
