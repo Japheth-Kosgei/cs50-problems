@@ -238,7 +238,7 @@ RGBTRIPLE do_average(RGBTRIPLE *array)
 {
     // Return a blurred pixel
     RGBTRIPLE blurred_pixel;
-    double len = (sizeof(*array) / sizeof(int));
+    double len = (sizeof(array) / sizeof(int));
 
     // Red
     double sum_red = 0;
