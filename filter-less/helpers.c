@@ -142,9 +142,35 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // Up_right
     if (i != 0 && j != (width - 1))
     {
-        up_right = copy[i - 1]
+        up_right = copy[i - 1][j + 1];
     }
+
     // Down_left
+    if (i != (height - 1) && j != 0)
+    {
+        down_left = copy[i + 1][j - 1];
+    }
+
     // Down_right
+    if (i != (height - 1) && j != (width - 1))
+    {
+        down_left = copy[i + 1][j + 1];
+    }
+
+    // Calculate the average and update the value of the original image's pixels
+    // Right edge
+    // Left edge
+    // Up edge
+    // Down edge
+    // Extreme up-right
+    // Extreme up-left
+    // Extreme down-left
+    // Extreme down-right
+    // Middle pixel
     return;
+}
+
+double average(double *array)
+{
+    // Do average
 }
