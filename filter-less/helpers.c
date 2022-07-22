@@ -110,12 +110,40 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     // Assign values to the variables based on the copy[i][j]
     // Left
-    if ()
+    if (j != 0)
+    {
+        left = copy[i][j - 1];
+    }
+
     // Right
+    if (j != (width - 1))
+    {
+        right = copy[i][j + 1];
+    }
+
     // Down
+    if (i != (height - 1))
+    {
+        down = copy[i + 1][j];
+    }
+
     // Up
+    if (i != 0)
+    {
+        up = copy[i - 1][j];
+    }
+
     // Up_left
+    if (i != 0 && j != 0)
+    {
+        up_left = copy[i - 1][j - 1;]
+    }
+
     // Up_right
+    if (i != 0 && j != (width - 1))
+    {
+        
+    }
     // Down_left
     // Down_right
     return;
