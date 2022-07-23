@@ -113,6 +113,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE down_left;
     RGBTRIPLE up_right;
     RGBTRIPLE down_right;
+    RGBTRIPLE original;
 
     // for (each pixel)
     // Assign values to the variables of the surrounding pixels
@@ -122,6 +123,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j =0; j < width; j ++) // Loop through all the columns within the current row
         {
+            // Original pixel
+            original = copy[i][j];
+
             // Left
             if (j != 0)
             {
@@ -176,64 +180,64 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // Right edge
             if (i != 0 && i != (height - 1) && j == (width - 1))
             {
-                RGBTRIPLE neighbors[] = {up, up_left, left, down_left, down};
-                image[i][j] = do_average(neighbors, 5);
+                RGBTRIPLE neighbors[] = {up, up_left, left, down_left, down, original};
+                image[i][j] = do_average(neighbors, 6);
             }
 
             // Left edge
             else if (i != 0 && i != (height - 1) && j == 0)
             {
-                RGBTRIPLE neighbors[] = {up, up_right, right, down_right, down};
-                image[i][j] = do_average(neighbors, 5);
+                RGBTRIPLE neighbors[] = {up, up_right, right, down_right, down, original};
+                image[i][j] = do_average(neighbors, 6);
             }
 
             // Up edge
             else if (i == 0 && j != (width - 1) && j != 0)
             {
-                RGBTRIPLE neighbors[] = {right, down_right, down, down_left, left};
-                image[i][j] = do_average(neighbors, 5);
+                RGBTRIPLE neighbors[] = {right, down_right, down, down_left, left, original};
+                image[i][j] = do_average(neighbors, 6);
             }
 
             // Down edge
             else if (i == (height - 1) && j != (width - 1) && j != 0)
             {
-                RGBTRIPLE neighbors[] = {left, up_left, up, up_right, right};
-                image[i][j] = do_average(neighbors, 5);
+                RGBTRIPLE neighbors[] = {left, up_left, up, up_right, right, original};
+                image[i][j] = do_average(neighbors, 6);
             }
 
             // Extreme up-right
             else if (i == 0 && j == (width - 1))
             {
-                RGBTRIPLE neighbors[] = {left, down_left, down};
-                image[i][j] = do_average(neighbors, 3);
+                RGBTRIPLE neighbors[] = {left, down_left, down, original};
+                image[i][j] = do_average(neighbors, 4);
             }
 
             // Extreme up-left
             else if (i == 0 && j == 0)
             {
-                RGBTRIPLE neighbors[] = {right, down_right, down};
-                image[i][j] = do_average(neighbors, 3);
+                RGBTRIPLE neighbors[] = {right, down_right, down, original};
+                image[i][j] = do_average(neighbors, 4);
             }
 
             // Extreme down-left
             else if (i == (height - 1) && j == 0)
             {
-                RGBTRIPLE neighbors[] = {right, up_right, up};
-                image[i][j] = do_average(neighbors, 3);
+                RGBTRIPLE neighbors[] = {right, up_right, up, original};
+                image[i][j] = do_average(neighbors, 4);
             }
 
             // Extreme down-right
             else if (i == 0 && j == (width - 1))
             {
-                RGBTRIPLE neighbors[] = {left, up_left, up};
-                image[i][j] = do_average(neighbors, 3);
+                RGBTRIPLE neighbors[] = {left, up_left, up, original};
+                image[i][j] = do_average(neighbors, 4);
             }
 
             // Middle pixel
             else
             {
-                RGBTRIPLE neighbors[] = {up, left, right, down, up_left, up_right, down_left, down_right};
-                image[i][j] = do_average(neighbors, 8);
+                RGBTRIPLE neighbors[] = {up, left, right, down, up_left, up_right, down_left, down_right, original};
+                image[i][j] = do_average(neighbors, 9);
             }
         }
     }
@@ -252,7 +256,7 @@ RGBTRIPLE do_average(RGBTRIPLE *array, double len)
         sum_red += array[i].rgbtRed;
     }
 
-    blurred_pixel.rgbtRed = (sum_red / len);
+    blurred_pixel.rgbtRed = round(sum_red / len);
 
     // Green
     double sum_green = 0;
@@ -261,7 +265,7 @@ RGBTRIPLE do_average(RGBTRIPLE *array, double len)
         sum_green += array[i].rgbtGreen;
     }
 
-    blurred_pixel.rgbtGreen = (sum_green / len);
+    blurred_pixel.rgbtGreen = round(sum_green / len);
 
     // Blue
     double sum_blue = 0;
@@ -270,7 +274,7 @@ RGBTRIPLE do_average(RGBTRIPLE *array, double len)
         sum_blue += array[i].rgbtBlue;
     }
 
-    blurred_pixel.rgbtBlue = (sum_blue / len);
+    blurred_pixel.rgbtBlue = round(sum_blue / len);
 
     return blurred_pixel;
 }
