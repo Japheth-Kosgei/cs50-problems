@@ -252,7 +252,7 @@ RGBTRIPLE do_average(RGBTRIPLE *array, double len)
         sum_red += array[i].rgbtRed;
     }
 
-    blurred_pixel.rgbtRed = round(sum_red / len);
+    blurred_pixel.rgbtRed = (sum_red / len);
 
     // Green
     double sum_green = 0;
@@ -261,7 +261,7 @@ RGBTRIPLE do_average(RGBTRIPLE *array, double len)
         sum_green += array[i].rgbtGreen;
     }
 
-    blurred_pixel.rgbtGreen = round(sum_green / len);
+    blurred_pixel.rgbtGreen = (sum_green / len);
 
     // Blue
     double sum_blue = 0;
@@ -270,7 +270,7 @@ RGBTRIPLE do_average(RGBTRIPLE *array, double len)
         sum_blue += array[i].rgbtBlue;
     }
 
-    blurred_pixel.rgbtBlue = round(sum_blue / len);
+    blurred_pixel.rgbtBlue = (sum_blue / len);
 
     return blurred_pixel;
 }
