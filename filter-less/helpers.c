@@ -227,7 +227,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Extreme down-right
-            else if (i == 0 && j == (width - 1))
+            else if (i == (height - 1) && j == (width - 1))
             {
                 RGBTRIPLE neighbors[] = {left, up_left, up, original};
                 image[i][j] = do_average(neighbors, 4);
