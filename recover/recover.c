@@ -41,13 +41,14 @@ int main(int argc, char *argv[])
         }
 
         // Allocate memory for the filename of the image
-        int number_of_image = -1;
+        int number_of_image = 0;
 
         // Check whether the buffer is a JPEG
         if (is_jpeg(buffer))
         {
             // Create a new file for writing the jpeg to
-            // If it is the first jpeg file(image 000)
+
+            // Check if this is the first jpeg file(image 000)
             if (strcmp("000.jpg", filename) != 0)
             {
                 FILE * image = fopen(filename, "w");
