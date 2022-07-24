@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
         return 2;
     }
 
+    bool end_of_file = false;
     while (end_of_file == false)
     {
         // Read 512-byte blocks of the data
