@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
                 fclose(filename);
 
                 // Open a new jpeg file
-                
+
                 number_of_image ++;
                 sprintf(filename, "%3i.jpg", 1)
                 fwrite(buffer, 512, 1, image0;)
@@ -70,6 +70,7 @@ int main(int argc, char *argv[])
 
         else
         {
+            // Write data to the existing open file
             fwrite(buffer, 512, 1, image);
         }
     }
