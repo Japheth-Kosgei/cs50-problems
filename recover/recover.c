@@ -76,8 +76,11 @@ int main(int argc, char *argv[])
 
         else
         {
-            // Write data to the existing open file
-            fwrite(buffer, 512, 1, image);
+            if (already_found_jpeg == true)
+            {
+                // Write data to the existing open file
+                fwrite(buffer, 512, 1, image);
+            }
         }
     }
 
