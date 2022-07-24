@@ -6,6 +6,8 @@
 
 typedef uint8_t BYTE;
 
+int BLOCK_SIZE = 512;
+
 bool is_jpeg(BYTE * array);
 
 int main(int argc, char *argv[])
