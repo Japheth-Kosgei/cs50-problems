@@ -27,11 +27,11 @@ int main(int argc, char *argv[])
         // Read 512-byte blocks of the data
         char *buffer = malloc(512);
         fread(buffer, 512, 1, mem_card);
-        for (int i = 0; i < (sizeof(*buffer) / sizeof(buffer[0])))
+        for (int i = 0; i < (sizeof(*buffer) / sizeof(buffer[0])); i ++)
         {
             if (buffer[i] == EOF)
             {
-                end_of_file == true;
+                end_of_file = true;
             }
         }
 
