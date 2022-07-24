@@ -23,17 +23,9 @@ int main(int argc, char *argv[])
 
     //
     char character;
-    while (true)
-    {
-        character = fgetc(file_ptr);
-        if (character == EOF)
-        {
-            printf("\n");
-            break;
-        }
+    fread(&character, 1, 1, file_ptr);
 
-        printf("%c", character);
-    }
+    printf("%c\n", character);
 
     // Close the file
     fclose(file_ptr);
