@@ -38,15 +38,22 @@ int main(int argc, char *argv[])
 
         // Allocate memory for the filename of the image
         char * filename = malloc(4);
+        int number_of_image = -1;
 
         // Check whether the buffer is a JPEG
         if (is_jpeg(buffer))
         {
             // Create a new file for writing the jpeg to
+            number_of_image ++;
             sprintf(filename, "%3i.jpg", 1)
             FILE * image = fopen(filename, "w");
 
             // Write the jpeg
+            fwrite(buffer, 512, 1, image);
+        }
+
+        else
+        {
             fwrite(buffer, 512, 1, image);
         }
     }
