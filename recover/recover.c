@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
     BYTE * buffer = malloc(512); // Buffer is an array of bytes
     char * filename = malloc(4);
-    filename = "000.jpg"; // First image
+    *filename = "000.jpg"; // First image
     bool already_found_jpeg = false;
     int number_of_image = 0;
 
