@@ -29,5 +29,5 @@ int main(int argc, char *argv[])
 
     // Close the file
     fclose(file_ptr);
-    free(character);
+    free(*character);
 }
