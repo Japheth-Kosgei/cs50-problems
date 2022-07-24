@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include
 
 bool is_jpeg(char * array, int len);
 
@@ -49,6 +50,6 @@ bool is_jpeg(char * array, int len)
         array[0] == 0xff &&
         array[1] == 0xd8 &&
         array[2] == 0xff &&
-        array[3] == 
+        array[3] ==
     )
 }
