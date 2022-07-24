@@ -5,7 +5,7 @@
 
 typedef uint8_t BYTE;
 
-bool is_jpeg(char * array, int len);
+bool is_jpeg(BYTE * array);
 
 int main(int argc, char *argv[])
 {
@@ -29,13 +29,13 @@ int main(int argc, char *argv[])
     while (true)
     {
         // Read 512-byte blocks of the data
-        if ((fread(buffer, 512, 1, mem_card)) < 1) // fread returns
+        if ((fread(buffer, 512, 1, mem_card)) < 1) // fread returns a number less then one if EOF is reached or an error occurs
         {
             break;
         }
 
         // Check whether the buffer is a JPEG
-        if (is_jpeg(buffer, 4))
+        if (is_jpeg(buffer))
     }
 
     // Free the buffer
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     fclose(mem_card);
 }
 
-bool is_jpeg(char * array, int len)
+bool is_jpeg(BYTE * array) // Take in an array of bytes
 {
     // Return true if the buffer is JPEG
     if (
