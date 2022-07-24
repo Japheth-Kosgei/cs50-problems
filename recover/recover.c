@@ -47,20 +47,17 @@ int main(int argc, char *argv[])
         // Check whether the buffer is a JPEG
         if (is_jpeg(buffer))
         {
-            // Make already_found_jpeg true, if not already true. This means that this is 
+            // Make already_found_jpeg true, if not already true. If false then it means this is the first jpeg
             if(already_found_jpeg == false)
             {
+                FILE * image = fopen(filename, "w");
+                fwrite(buffer, 512, 1, image);
                 already_found_jpeg == true;
             }
 
             // Create a new file for writing the jpeg to
-            FILE * image = fopen(filename, "w");
 
             // Check if this is the first jpeg file(image 000)
-            if (strcmp("000.jpg", filename) != 0)
-            {
-                fwrite(buffer, 512, 1, image);
-            }
 
             else
             {
