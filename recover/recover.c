@@ -31,14 +31,14 @@ int main(int argc, char *argv[])
 
     BYTE * buffer = malloc(512); // Buffer is an array of bytes
     char * filename = malloc(8);
-    filename = "000.jpg"; // First image
+    sprintf(filename, "%3i.jpg", 0); // First image
     bool already_found_jpeg = false;
     int number_of_image = 0;
     FILE * image = fopen(filename, "w");
 
     // Loop through the image in 512 B chunks
     // Read 512-byte blocks of the data
-    while (fread(buffer, 1, BLOCK_SIZE, mem_card) == BLOCK_SIZE))
+    while (fread(buffer, 1, BLOCK_SIZE, mem_card) == BLOCK_SIZE)
     {
 
         // Allocate memory for the filename of the image
