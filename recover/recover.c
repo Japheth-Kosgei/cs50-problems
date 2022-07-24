@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
         return 2;
     }
 
+
+    // Loop through the image in 512 B chunks
     BYTE *buffer = malloc(512); // Buffer is an array of bytes
     while (true)
     {
