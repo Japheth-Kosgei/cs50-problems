@@ -36,6 +36,9 @@ int main(int argc, char *argv[])
 
         // Check whether the buffer is a JPEG
         if (is_jpeg(buffer))
+        {
+            // 
+        }
     }
 
     // Free the buffer
@@ -52,6 +55,9 @@ bool is_jpeg(BYTE * array) // Take in an array of bytes
         array[0] == 0xff &&
         array[1] == 0xd8 &&
         array[2] == 0xff &&
-        array[3] ==
+        (array[3] & 0xf0) == 0xe0
     )
+    {
+        return true;
+    }
 }
