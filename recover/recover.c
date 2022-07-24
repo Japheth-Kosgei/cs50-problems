@@ -68,9 +68,9 @@ int main(int argc, char *argv[])
                 fclose(filename);
 
                 // Open a new jpeg file
-
                 number_of_image ++;
                 sprintf(filename, "%3i.jpg", 1)
+                FILE * image = fopen(filename, "w");
                 fwrite(buffer, 512, 1, image0;)
             }
         }
