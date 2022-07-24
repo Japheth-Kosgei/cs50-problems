@@ -22,11 +22,12 @@ int main(int argc, char *argv[])
     }
 
     //
-    char character;
-    fread(&character, 1, 5, file_ptr);
+    char *character = malloc(sizeof(char) * 5);
+    fread(character, 512, 1, file_ptr);
 
-    printf("%c\n", character);
+    printf("%s\n", character);
 
     // Close the file
     fclose(file_ptr);
+    free(character);
 }
