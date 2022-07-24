@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     while (true)
     {
         // Read 512-byte blocks of the data
-        char buffer = malloc(sizeof(char))
+        char buffer = malloc(sizeof(char) * 64)
     }
 
     // Close the file
