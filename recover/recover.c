@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 
     // Loop through the image in 512 B chunks
     // Read 512-byte blocks of the data
-    while (fread(buffer, 1, BLOCK_SIZE, mem_card) == BLOCK_SIZE)
+    while (fread(buffer, 1, BLOCK_SIZE, mem_card) == BLOCK_SIZE))
     {
 
         // Allocate memory for the filename of the image
