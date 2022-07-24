@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     while (true)
     {
         // Read 512-byte blocks of the data
-        if ((fread(buffer, 2, 1, mem_card)) < 1)
+        if ((fread(buffer, 512, 1, mem_card)) < 1)
         {
             break;
         }
