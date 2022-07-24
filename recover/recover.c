@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     // Ensure only one command-line argument is given
     if (argc != 2)
     {
-        printf("Usage: recover <filename>\n");
+        printf("Usage: recover IMAGE\n");
         return 1;
     }
 
