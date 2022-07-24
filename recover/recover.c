@@ -55,10 +55,6 @@ int main(int argc, char *argv[])
                 already_found_jpeg == true;
             }
 
-            // Create a new file for writing the jpeg to
-
-            // Check if this is the first jpeg file(image 000)
-
             else
             {
                 // Close the file that I have been working on in the last iteration
