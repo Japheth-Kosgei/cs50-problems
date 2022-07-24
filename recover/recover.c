@@ -36,6 +36,8 @@ int main(int argc, char *argv[])
             break;
         }
 
+        // Allocate memory for the filename of the image
+        char * filename = malloc(4);
         // Check whether the buffer is a JPEG
         if (is_jpeg(buffer))
         {
@@ -47,6 +49,8 @@ int main(int argc, char *argv[])
 
     // Free the buffer
     free(buffer);
+    // Free the filename memory
+    free(filename);
 
     // Close the file
     fclose(mem_card);
