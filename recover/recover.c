@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
                 // Close the file that I have been working on in the last iteration
                 fclose(filename);
 
-                // Open a new jpeg file
+                // Open a new jpeg file and write into it.
                 number_of_image ++;
                 sprintf(filename, "%3i.jpg", 1)
                 FILE * image = fopen(filename, "w");
