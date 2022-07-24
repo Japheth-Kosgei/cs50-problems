@@ -25,6 +25,11 @@ int main(int argc, char *argv[])
     {
         // Read 512-byte blocks of the data
         char *buffer = malloc(512);
+        fread(buffer, sizeof(*buffer), 1, mem_card);
+        if (buffer == EOF)
+        {
+            break;
+        }
 
         // Free the buffer
         free(buffer);
