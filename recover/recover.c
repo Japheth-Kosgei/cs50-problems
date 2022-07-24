@@ -58,13 +58,13 @@ int main(int argc, char *argv[])
             else // This is not the first jpeg block.
             {
                 // Close the file that I have been working on in the last iteration
-                fclose(image);
+                // fclose(image);
 
                 // Open a new jpeg file and write into it.
                 number_of_image ++;
-                sprintf(filename, "%3i.jpg", 1)
+                sprintf(filename, "%3i.jpg", 1);
                 FILE * image = fopen(filename, "w");
-                fwrite(buffer, 512, 1, image0;)
+                fwrite(buffer, 512, 1, image);
             }
         }
 
