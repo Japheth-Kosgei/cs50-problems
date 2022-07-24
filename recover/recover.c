@@ -37,13 +37,9 @@ int main(int argc, char *argv[])
     FILE * image = fopen(filename, "w");
 
     // Loop through the image in 512 B chunks
-    while (true)
+    // Read 512-byte blocks of the data
+    while (fread(buffer, 1, BLOCK_SIZE, mem_card) == BLOCK_SIZE)
     {
-        // Read 512-byte blocks of the data
-        if ((fread(buffer, 1, BLOCK_SIZE, mem_card)) < 1) // fread returns a number less then one if EOF is reached or an error occurs
-        {
-            break;
-        }
 
         // Allocate memory for the filename of the image
 
