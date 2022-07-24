@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
     char * filename = malloc(4);
     filename = "000.jpg"; // First image
     bool already_found_jpeg = false;
+    int number_of_image = 0;
 
     // Loop through the image in 512 B chunks
     while (true)
@@ -42,7 +43,6 @@ int main(int argc, char *argv[])
         }
 
         // Allocate memory for the filename of the image
-        int number_of_image = 0;
 
         // Check whether the buffer is a JPEG
         if (is_jpeg(buffer))
@@ -52,6 +52,7 @@ int main(int argc, char *argv[])
             {
                 already_found_jpeg == true;
             }
+
             // Create a new file for writing the jpeg to
             FILE * image = fopen(filename, "w");
 
