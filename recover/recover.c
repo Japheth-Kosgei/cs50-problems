@@ -50,13 +50,18 @@ int main(int argc, char *argv[])
             // If it is the first jpeg file(image 000)
             if (strcmp("000.jpg", filename) != 0)
             {
-                fwrite(buffer, 512, 1, filename);
+                fwrite(buffer, 512, 1, image);
             }
-            number_of_image ++;
+
+            else
+            {
+                
+            }
             sprintf(filename, "%3i.jpg", 1)
 
             // Write the jpeg
             fwrite(buffer, 512, 1, image);
+            number_of_image ++;
         }
 
         else
