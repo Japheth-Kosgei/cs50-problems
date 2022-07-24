@@ -26,8 +26,8 @@ int main(int argc, char *argv[])
     while (end_of_file == false)
     {
         // Read 512-byte blocks of the data
-        fread(buffer, 512, 1, mem_card);
-        for (int i = 0; i < 512; i ++)
+        fread(buffer, 5, 1, mem_card);
+        for (int i = 0; i < 5; i ++)
         {
             if (buffer[i] == EOF)
             {
