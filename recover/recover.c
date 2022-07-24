@@ -57,13 +57,10 @@ int main(int argc, char *argv[])
 
             else
             {
-                fclose(image);
+                number_of_image ++;
+                sprintf(filename, "%3i.jpg", 1)
+                fwrite(buffer, 512, 1, image0;)
             }
-            sprintf(filename, "%3i.jpg", 1)
-
-            // Write the jpeg
-            fwrite(buffer, 512, 1, image);
-            number_of_image ++;
         }
 
         else
