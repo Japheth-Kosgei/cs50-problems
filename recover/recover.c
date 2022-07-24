@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 
             else
             {
-                
+                fclose(image);
             }
             sprintf(filename, "%3i.jpg", 1)
 
