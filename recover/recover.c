@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <stdint>
+#include <stdint.h>
 #include <string.h>
 
 typedef uint8_t BYTE;
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
     BYTE * buffer = malloc(512); // Buffer is an array of bytes
     char * filename = malloc(8);
-    *filename = "000.jpg"; // First image
+    filename = "000.jpg"; // First image
     bool already_found_jpeg = false;
     int number_of_image = 0;
 
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
             {
                 FILE * image = fopen(filename, "w");
                 fwrite(buffer, 512, 1, image);
-                already_found_jpeg == true;
+                already_found_jpeg = true;
             }
 
             else // This is not the first jpeg block.
