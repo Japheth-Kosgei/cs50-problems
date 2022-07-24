@@ -21,23 +21,20 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    bool end_of_file = false;
     char *buffer = malloc(512);
-    while (end_of_file == false)
+    while (true)
     {
         // Read 512-byte blocks of the data
-        fread(buffer, 5, 1, mem_card);
-        for (int i = 0; i < 5; i ++)
+        if ((fread(buffer, 2, 1, mem_card)) < 1)
         {
-            if (buffer[i] == EOF)
-            {
-                end_of_file = true;
-            }
+            break;
         }
 
         printf("%s", buffer);
+
         // Free the buffer
     }
+    printf("\n");
     free(buffer);
 
     // Close the file
