@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
     //
     char character;
-    fread(&character, 1, 1, file_ptr);
+    fread(&character, 1, 5, file_ptr);
 
     printf("%c\n", character);
 
