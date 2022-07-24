@@ -57,6 +57,11 @@ int main(int argc, char *argv[])
 
             else
             {
+                // Close the file that I have been working on in the last iteration
+                fclose(filename);
+
+                // Open a new jpeg file
+                
                 number_of_image ++;
                 sprintf(filename, "%3i.jpg", 1)
                 fwrite(buffer, 512, 1, image0;)
