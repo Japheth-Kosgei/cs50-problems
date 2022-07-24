@@ -32,6 +32,7 @@ int main(int argc, char *argv[])
     filename = "000.jpg"; // First image
     bool already_found_jpeg = false;
     int number_of_image = 0;
+    FILE * image = fopen(filename, "w");
 
     // Loop through the image in 512 B chunks
     while (true)
@@ -50,7 +51,6 @@ int main(int argc, char *argv[])
             // Make already_found_jpeg true, if not already true. If false then it means this is the first jpeg
             if(already_found_jpeg == false)
             {
-                FILE * image = fopen(filename, "w");
                 fwrite(buffer, 512, 1, image);
                 already_found_jpeg = true;
             }
