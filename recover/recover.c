@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+bool is_jpeg(char * array, int len);
+
 int main(int argc, char *argv[])
 {
     // Ensure only one command-line argument is given
@@ -31,11 +33,20 @@ int main(int argc, char *argv[])
         }
 
         // Check whether the buffer is a JPEG
-    }
+        if (is_jpeg(buffer, 4))
 
     // Free the buffer
     free(buffer);
 
     // Close the file
     fclose(mem_card);
+}
+
+bool is_jpeg(char * array, int len)
+{
+    // Return true if the buffer is JPEG
+    for (int i = 0; i < len; i ++)
+    {
+
+    }
 }
