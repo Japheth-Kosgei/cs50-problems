@@ -3,6 +3,8 @@
 #include <stdbool.h>
 #include <stdint>
 
+typedef uint8_t BYTE;
+
 bool is_jpeg(char * array, int len);
 
 int main(int argc, char *argv[])
@@ -15,8 +17,7 @@ int main(int argc, char *argv[])
     }
 
     // Open the file
-    char * filename = argv[1];
-    FILE * mem_card = fopen(filename, "r");
+    FILE * mem_card = fopen(argv[1], "r");
 
     if (mem_card == NULL)
     {
@@ -24,7 +25,7 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    char *buffer = malloc(512);
+    BYTE *buffer = malloc(512);
     while (true)
     {
         // Read 512-byte blocks of the data
