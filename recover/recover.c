@@ -25,7 +25,9 @@ int main(int argc, char *argv[])
     {
         // Read 512-byte blocks of the data
         char *buffer = malloc(512);
-        printf("Size of char = %li\n", sizeof(char));
+
+        // Free the buffer
+        free(buffer);
     }
 
     // Close the file
