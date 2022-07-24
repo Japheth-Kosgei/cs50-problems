@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
             else // This is not the first jpeg block.
             {
                 // Close the file that I have been working on in the last iteration
-                fclose(filename);
+                fclose(image);
 
                 // Open a new jpeg file and write into it.
                 number_of_image ++;
@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
     }
 
     // Close the file on the last iteration
-    fclose(filename);
+    fclose(image);
     // Free the buffer
     free(buffer);
     // Free the filename memory
