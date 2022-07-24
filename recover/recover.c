@@ -48,9 +48,8 @@ int main(int argc, char *argv[])
             // If it is the first jpeg file(image 000)
             if (strcmp("000.jpg", filename) != 0)
             {
-                
+
             }
-            fclose(filename);
             number_of_image ++;
             sprintf(filename, "%3i.jpg", 1)
             FILE * image = fopen(filename, "w");
