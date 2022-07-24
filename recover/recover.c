@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
             break;
         }
 
+        printf("%s", buffer);
         // Free the buffer
         free(buffer);
     }
