@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
         if (is_jpeg(buffer))
         {
             // Create a new file for writing the jpeg to
+            FILE * image = fopen(filename, "w");
             // If it is the first jpeg file(image 000)
             if (strcmp("000.jpg", filename) != 0)
             {
@@ -53,7 +54,6 @@ int main(int argc, char *argv[])
             }
             number_of_image ++;
             sprintf(filename, "%3i.jpg", 1)
-            FILE * image = fopen(filename, "w");
 
             // Write the jpeg
             fwrite(buffer, 512, 1, image);
