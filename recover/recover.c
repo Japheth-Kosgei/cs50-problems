@@ -23,7 +23,8 @@ int main(int argc, char *argv[])
 
     while (true)
     {
-        // Read 512 blocks of the data
+        // Read 512-byte blocks of the data
+        char buffer = malloc(sizeof(char))
     }
 
     // Close the file
