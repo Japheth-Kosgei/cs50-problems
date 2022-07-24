@@ -25,11 +25,11 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    BYTE *buffer = malloc(512);
+    BYTE *buffer = malloc(512); // Buffer is an array of bytes
     while (true)
     {
         // Read 512-byte blocks of the data
-        if ((fread(buffer, 512, 1, mem_card)) < 1)
+        if ((fread(buffer, 512, 1, mem_card)) < 1) // fread returns
         {
             break;
         }
