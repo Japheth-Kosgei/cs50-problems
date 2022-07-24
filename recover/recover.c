@@ -24,10 +24,10 @@ int main(int argc, char *argv[])
     while (true)
     {
         // Read 512-byte blocks of the data
-        char buffer = malloc(sizeof(char) * 64)
+        char *buffer = malloc(sizeof(char) * 64);
+        printf("Size of char = %li\n", sizeof(char));
     }
 
     // Close the file
     fclose(mem_card);
-    free(character);
 }
