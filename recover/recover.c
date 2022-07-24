@@ -30,11 +30,10 @@ int main(int argc, char *argv[])
             break;
         }
 
-        printf("%s", buffer);
-
-        // Free the buffer
+        // Check whether the buffer is a JPEG
     }
-    printf("\n");
+
+    // Free the buffer
     free(buffer);
 
     // Close the file
