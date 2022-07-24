@@ -48,7 +48,10 @@ int main(int argc, char *argv[])
         if (is_jpeg(buffer))
         {
             // Make already_found_jpeg true, if not already true
-            if(already)
+            if(already_found_jpeg == false)
+            {
+                already_found_jpeg == true;
+            }
             // Create a new file for writing the jpeg to
             FILE * image = fopen(filename, "w");
 
