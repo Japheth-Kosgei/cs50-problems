@@ -31,10 +31,10 @@ int main(int argc, char *argv[])
 
     BYTE * buffer = malloc(512); // Buffer is an array of bytes
     char * filename = malloc(8);
-    sprintf(filename, "%3i.jpg", 0); // First image
+    sprintf(filename, "%03i.jpg", 0); // First image
     bool already_found_jpeg = false;
     int number_of_image = 0;
-    FILE * image = fopen(filename, "w");
+    FILE * image = fopen(filename, "a");
 
     // Loop through the image in 512 B chunks
     // Read 512-byte blocks of the data
@@ -60,8 +60,8 @@ int main(int argc, char *argv[])
 
                 // Open a new jpeg file and write into it.
                 number_of_image ++;
-                sprintf(filename, "%3i.jpg", 1);
-                image = fopen(filename, "w");
+                sprintf(filename, "%03i.jpg", 1);
+                image = fopen(filename, "a");
                 fwrite(buffer, 1, BLOCK_SIZE, image);
             }
         }
