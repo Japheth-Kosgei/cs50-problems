@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
 
     BYTE * buffer = malloc(512); // Buffer is an array of bytes
-    char * filename = malloc(4);
+    char * filename = malloc(8);
     *filename = "000.jpg"; // First image
     bool already_found_jpeg = false;
     int number_of_image = 0;
@@ -78,11 +78,12 @@ int main(int argc, char *argv[])
         }
     }
 
+    // Close the file on the last iteration
+    fclose(filename);
     // Free the buffer
     free(buffer);
     // Free the filename memory
     free(filename);
-
     // Close the file
     fclose(mem_card);
 }
