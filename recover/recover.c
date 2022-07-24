@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     while (true)
     {
         // Read 512-byte blocks of the data
-        if ((fread(buffer, 512, 1, mem_card)) < 1) // fread returns a number less then one if EOF is reached or an error occurs
+        if ((fread(buffer, 1, BLOCK_SIZE, mem_card)) < 1) // fread returns a number less then one if EOF is reached or an error occurs
         {
             break;
         }
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
             // Make already_found_jpeg true, if not already true. If false then it means this is the first jpeg
             if(already_found_jpeg == false)
             {
-                fwrite(buffer, 512, 1, image);
+                fwrite(buffer, 1, BLOCK_SIZE, image);
                 already_found_jpeg = true;
             }
 
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
                 number_of_image ++;
                 sprintf(filename, "%3i.jpg", 1);
                 image = fopen(filename, "w");
-                fwrite(buffer, 512, 1, image);
+                fwrite(buffer, 1, BLOCK_SIZE, image);
             }
         }
 
@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
             if (already_found_jpeg == true)
             {
                 // Write data to the existing open file
-                fwrite(buffer, 512, 1, image);
+                fwrite(buffer, 1, BLOCK_SIZE, image);
             }
         }
     }
