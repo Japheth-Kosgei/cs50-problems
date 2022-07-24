@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
         if (is_jpeg(buffer))
         {
             // Create a new file for writing the jpeg to
+            sprintf(filename, "%3i.jpg", 2)
             FILE * image = fopen(filename, "w");
             // Write the jpeg
         }
