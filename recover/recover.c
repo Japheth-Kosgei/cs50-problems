@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
         // Check whether the buffer is a JPEG
         if (is_jpeg(buffer))
         {
-            // Make already_found_jpeg true, if not already true
+            // Make already_found_jpeg true, if not already true. This means that this is 
             if(already_found_jpeg == false)
             {
                 already_found_jpeg == true;
