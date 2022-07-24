@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
                 already_found_jpeg == true;
             }
 
-            else
+            else // This is not the first jpeg block.
             {
                 // Close the file that I have been working on in the last iteration
                 fclose(filename);
