@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
     while (true)
     {
-        
+        // Read 512 blocks of the data
     }
 
     // Close the file
