@@ -37,7 +37,9 @@ int main(int argc, char *argv[])
         // Check whether the buffer is a JPEG
         if (is_jpeg(buffer))
         {
-            // 
+            // Create a new file for writing the jpeg to
+            FILE * image = fopen(filename, "w");
+            // Write the jpeg
         }
     }
 
