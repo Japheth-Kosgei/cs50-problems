@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
 
         // Allocate memory for the filename of the image
         char * filename = malloc(4);
+        filename = "000.jpg"; // First image
         int number_of_image = -1;
 
         // Check whether the buffer is a JPEG
@@ -48,7 +49,7 @@ int main(int argc, char *argv[])
             // If it is the first jpeg file(image 000)
             if (strcmp("000.jpg", filename) != 0)
             {
-
+                fwrite(buffer, 512, 1, filename);
             }
             number_of_image ++;
             sprintf(filename, "%3i.jpg", 1)
