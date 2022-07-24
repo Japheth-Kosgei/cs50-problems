@@ -13,21 +13,20 @@ int main(int argc, char *argv[])
 
     // Open the file
     char * filename = argv[1];
-    FILE * file_ptr = fopen(filename, "r");
+    FILE * mem_card = fopen(filename, "r");
 
-    if (file_ptr == NULL)
+    if (mem_card == NULL)
     {
         printf("Error: File could not be opened.\n");
         return 2;
     }
 
-    //
-    char *character = malloc(sizeof(char) * 5);
-    fread(character, 512, 1, file_ptr);
-
-    printf("%s\n", character);
+    while (true)
+    {
+        
+    }
 
     // Close the file
-    fclose(file_ptr);
-    free(*character);
+    fclose(mem_card);
+    free(character);
 }
