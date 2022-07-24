@@ -46,10 +46,10 @@ int main(int argc, char *argv[])
         if (is_jpeg(buffer))
         {
             // Create a new file for writing the jpeg to
-            FILE * image = fopen(filename, "w");
             // If it is the first jpeg file(image 000)
             if (strcmp("000.jpg", filename) != 0)
             {
+                FILE * image = fopen(filename, "w");
                 fwrite(buffer, 512, 1, image);
             }
 
