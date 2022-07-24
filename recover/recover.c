@@ -22,10 +22,10 @@ int main(int argc, char *argv[])
     }
 
     bool end_of_file = false;
+    char *buffer = malloc(512);
     while (end_of_file == false)
     {
         // Read 512-byte blocks of the data
-        char *buffer = malloc(512);
         fread(buffer, 512, 1, mem_card);
         for (int i = 0; i < (sizeof(*buffer) / sizeof(buffer[0])); i ++)
         {
@@ -37,8 +37,8 @@ int main(int argc, char *argv[])
 
         printf("%s", buffer);
         // Free the buffer
-        free(buffer);
     }
+    free(buffer);
 
     // Close the file
     fclose(mem_card);
