@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Open the file
+    // Open the memory card
     FILE * mem_card = fopen(argv[1], "r");
 
     if (mem_card == NULL)
