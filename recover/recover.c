@@ -45,5 +45,10 @@ int main(int argc, char *argv[])
 bool is_jpeg(char * array, int len)
 {
     // Return true if the buffer is JPEG
-    if (array[i])
+    if (
+        array[0] == 0xff &&
+        array[1] == 0xd8 &&
+        array[2] == 0xff &&
+        array[3] == 
+    )
 }
