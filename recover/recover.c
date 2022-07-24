@@ -27,8 +27,11 @@ int main(int argc, char *argv[])
     }
 
 
+    BYTE * buffer = malloc(512); // Buffer is an array of bytes
+    char * filename = malloc(4);
+    filename = "000.jpg"; // First image
+
     // Loop through the image in 512 B chunks
-    BYTE *buffer = malloc(512); // Buffer is an array of bytes
     while (true)
     {
         // Read 512-byte blocks of the data
@@ -38,8 +41,6 @@ int main(int argc, char *argv[])
         }
 
         // Allocate memory for the filename of the image
-        char * filename = malloc(4);
-        filename = "000.jpg"; // First image
         int number_of_image = -1;
 
         // Check whether the buffer is a JPEG
