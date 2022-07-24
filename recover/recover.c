@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include
+#include <stdint>
 
 bool is_jpeg(char * array, int len);
 
@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
 
         // Check whether the buffer is a JPEG
         if (is_jpeg(buffer, 4))
+    }
 
     // Free the buffer
     free(buffer);
