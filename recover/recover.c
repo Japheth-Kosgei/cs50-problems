@@ -8,7 +8,7 @@ typedef uint8_t BYTE;
 
 int BLOCK_SIZE = 512;
 
-bool is_jpeg(BYTE * array);
+bool is_jpeg(BYTE *array);
 
 int main(int argc, char *argv[])
 {
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     }
 
     // Open the memory card
-    FILE * mem_card = fopen(argv[1], "r");
+    FILE *mem_card = fopen(argv[1], "r");
 
     if (mem_card == NULL)
     {
@@ -29,12 +29,12 @@ int main(int argc, char *argv[])
     }
 
 
-    BYTE * buffer = malloc(512); // Buffer is an array of bytes
-    char * filename = malloc(8);
+    BYTE *buffer = malloc(512);// Buffer is an array of bytes
+    char *filename = malloc(8);
     sprintf(filename, "%03i.jpg", 0); // First image
     bool already_found_jpeg = false;
     int number_of_image = 0;
-    FILE * image = fopen(filename, "w");
+    FILE *image = fopen(filename, "w");
 
     // Loop through the image in 512 B chunks
     // Read 512-byte blocks of the data
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
         if (is_jpeg(buffer))
         {
             // Make already_found_jpeg true, if not already true. If false then it means this is the first jpeg
-            if(already_found_jpeg == false)
+            if (already_found_jpeg == false)
             {
                 fwrite(buffer, 1, BLOCK_SIZE, image);
                 already_found_jpeg = true;
@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
     fclose(mem_card);
 }
 
-bool is_jpeg(BYTE * array) // Take in an array of bytes
+bool is_jpeg(BYTE *array)// Take in an array of bytes
 {
     // Return true if the buffer is JPEG
     if (
