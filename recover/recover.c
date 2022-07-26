@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 
                 // Open a new jpeg file and write into it.
                 number_of_image ++;
-                sprintf(filename, "%03i.jpg", 1);
+                sprintf(filename, "%03i.jpg", number_of_image);
                 image = fopen(filename, "w");
                 fwrite(buffer, 1, BLOCK_SIZE, image);
             }
