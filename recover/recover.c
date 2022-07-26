@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     sprintf(filename, "%03i.jpg", 0); // First image
     bool already_found_jpeg = false;
     int number_of_image = 0;
-    FILE * image = fopen(filename, "a");
+    FILE * image = fopen(filename, "w");
 
     // Loop through the image in 512 B chunks
     // Read 512-byte blocks of the data
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
                 // Open a new jpeg file and write into it.
                 number_of_image ++;
                 sprintf(filename, "%03i.jpg", 1);
-                image = fopen(filename, "a");
+                image = fopen(filename, "w");
                 fwrite(buffer, 1, BLOCK_SIZE, image);
             }
         }
