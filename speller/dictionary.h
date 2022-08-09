@@ -7,7 +7,7 @@
 
 // Maximum length for a word
 // (e.g., pneumonoultramicroscopicsilicovolcanoconiosis)
-#define LENGTH 
+#define LENGTH 45
 
 // Prototypes
 bool check(const char *word);
